@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>ACT.Interfaces</RootNamespace>
+    <ApplicationIcon>ACT_Interfaces.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseOutputPath>D:\IVolt_Releases\ACT-Interfaces</BaseOutputPath>
+    <SignAssembly>True</SignAssembly>
+    <ErrorReport>none</ErrorReport>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>2.0.3</Version>
+    <Authors>IVolt, Mark Alicz, Darkbit</Authors>
+    <Description>Full List of Interfaces</Description>
+    <Copyright>2020-2021 IVolt, LLC</Copyright>
+    <PackageProjectUrl>https://www.ivolt.io/</PackageProjectUrl>
+    <PackageIcon>ACT_Common_Icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
+    <PackageTags>.NET 6, Interface Library, ACT Library</PackageTags>
+    <PackageReleaseNotes>Initial Conversion Of .NET Framework To .NET 6</PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <AssemblyVersion>2.0.3</AssemblyVersion>
+    <FileVersion>2.0.3</FileVersion>
+    <PackageLicenseExpression>  GPL-3.0-only</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ACT_Interfaces.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_Interfaces_Library\ACT_Common_Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

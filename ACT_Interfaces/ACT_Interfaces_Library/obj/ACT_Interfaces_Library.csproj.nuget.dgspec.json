@@ -8,7 +8,7 @@
       "version": "2.0.3",
       "restore": {
         "projectUniqueName": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
-        "projectName": "ACT_Interfaces_Library",
+        "projectName": "ACT_Interfaces",
         "projectPath": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
         "packagesPath": "C:\\Users\\MarkAlicz\\.nuget\\packages\\",
         "outputPath": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\obj\\",
@@ -26,7 +26,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
@@ -35,8 +35,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,18 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

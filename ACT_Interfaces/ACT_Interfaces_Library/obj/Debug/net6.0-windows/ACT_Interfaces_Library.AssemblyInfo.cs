@@ -11,13 +11,17 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ACT_Interfaces_Library")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("IVolt, Mark Alicz, Darkbit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ACT_Interfaces_Library")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ACT_Interfaces_Library")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("2020-2021 IVolt, LLC")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Full List of Interfaces")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.3")]
+[assembly: System.Reflection.AssemblyProductAttribute("ACT_Interfaces")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ACT_Interfaces")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.4")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/InspiredVoltage-IVolt/ACT_Interfaces")]
+[assembly: System.Resources.NeutralResourcesLanguageAttribute("en-US")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 

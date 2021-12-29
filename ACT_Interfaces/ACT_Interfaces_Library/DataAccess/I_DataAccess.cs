@@ -4,8 +4,15 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     public interface I_DataAccess : I_Plugin
     {
+        /// <summary>
+        /// Create table from a Class 
+        /// </summary>
+        /// <param name="Class"></param>
+        /// <param name="SQL"></param>
+        /// <param name="AutoExecute"></param>
+        /// <param name="CreateIdentity"></param>
+        /// <param name="Recursive"></param>
         void CreateTableFromI_CoreObject(object Class, out string SQL, bool AutoExecute = false, bool CreateIdentity = true, bool Recursive = false);
-
 
         /// <summary>
         /// Generates The Where Statement Based On the IDbWhereStatement
@@ -21,8 +28,20 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <returns></returns>
         List<System.Data.IDataParameter> GenerateWhereStatementParameters(I_DbWhereStatement Where);
 
-        ACT.Core.Interfaces.Security.I_UserInfo AuthenticateUser(string UserName, string Password);
-        bool AuthenticateUser(ACT.Core.Interfaces.Security.I_UserInfo User);
+        /// <summary>
+        /// Authenticate User Based On Only Username and Password
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
+        Security.I_UserInfo AuthenticateUser(string UserName, string Password);
+
+        /// <summary>
+        /// Authenticate the user against the database.
+        /// </summary>
+        /// <param name="User">User Info</param>
+        /// <returns></returns>
+        bool AuthenticateUser(Security.I_UserInfo User);
 
 
         /// <summary>
@@ -34,6 +53,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="CmdType">Type of Command - System.Data.CommandType</param>
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(string CommandText, List<System.Data.IDataParameter> Params, bool ReturnsRows, System.Data.CommandType CmdType);
+
         /// <summary>
         /// Performs a Database Action.  All Indexes must match- i.e Command[0] with Param[0]
         /// </summary>
@@ -43,6 +63,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="CmdType">Type of Command - System.Data.CommandType</param>
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(List<string> CommandTexts, List<List<System.Data.IDataParameter>> Params, List<bool> ReturnsRows, List<System.Data.CommandType> CmdTypes);
+
         /// <summary>
         /// Performs a Database Action.  All Indexes must match- i.e Command[0] with Param[0]
         /// </summary>
@@ -55,8 +76,23 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(List<string> CommandTexts, List<List<System.Data.IDataParameter>> Params, List<bool> ReturnsRows, bool UseTransactions, bool AutoRollback, List<System.Data.CommandType> CmdTypes);
 
+        /// <summary>
+        /// Execute Bulk Insert (Fast Fast)
+        /// </summary>
+        /// <param name="BulkData"></param>
+        /// <param name="TableName"></param>
+        /// <param name="BulkCopyOptions"></param>
+        /// <returns></returns>
         I_QueryResult ExecuteBulkInsert(System.Data.DataTable BulkData, string TableName, System.Data.SqlClient.SqlBulkCopyOptions BulkCopyOptions);
 
+        /// <summary>
+        /// Execute Bulk Insert (Fast Fast) With Column Mapping
+        /// </summary>
+        /// <param name="BulkData"></param>
+        /// <param name="TableName"></param>
+        /// <param name="BulkCopyOptions"></param>
+        /// <param name="addColumnMapping"></param>
+        /// <returns></returns>
         I_QueryResult ExecuteBulkInsert(System.Data.DataTable BulkData, string TableName, System.Data.SqlClient.SqlBulkCopyOptions BulkCopyOptions, bool addColumnMapping);
 
         /// <summary>
@@ -173,16 +209,56 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <returns>IQueryResult</returns>
         I_QueryResult DeleteData(string TableName, I_DbWhereStatement Where);
 
-
+        /// <summary>
+        /// Duplicate Rows BasedOn the Where Statement
+        /// </summary>
+        /// <param name="TableName"></param>
+        /// <param name="Where"></param>
+        /// <returns></returns>
         I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where);
+
+        /// <summary>
+        /// Duplicate Rows BasedOn the Where Statement Limit to the First x Number
+        /// </summary>
+        /// <param name="TableName">Table Name</param>
+        /// <param name="Where"></param>
+        /// <param name="Number">Limit to First Number Of Rows</param>
+        /// <returns></returns>
         I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where, int Number);
 
-
-
+        /// <summary>
+        /// Insert Data
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="FieldsAndValues"></param>
+        /// <returns></returns>
         I_QueryResult InsertData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+
+        /// <summary>
+        /// Update Data
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="FieldsAndValues"></param>
+        /// <param name="Where"></param>
+        /// <returns></returns>
         I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, I_DbWhereStatement Where);
+
+        /// <summary>
+        /// Update Data
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="FieldsAndValues"></param>
+        /// <returns></returns>
         I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+
+        /// <summary>
+        /// Delete Data
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="Where"></param>
+        /// <returns></returns>
         I_QueryResult DeleteData(I_DbTable Table, I_DbWhereStatement Where);
+
         /// <summary>
         /// Special Function.  You can use the to clean databases when you are really deleting items.  FK Erros would occur otherwise
         /// </summary>
@@ -191,8 +267,30 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="RecursiveDelete"></param>
         /// <returns></returns>
         I_QueryResult DeleteData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, bool RecursiveDelete);
+
+        /// <summary>
+        /// Duplicate Row
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="FieldsAndValues"></param>
+        /// <returns></returns>
         I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+
+        /// <summary>
+        /// Duplicate Row With Limit
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="FieldsAndValues"></param>
+        /// <param name="Number"></param>
+        /// <returns></returns>
         I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, int Number);
+
+        /// <summary>
+        /// Get Table Data
+        /// </summary>
+        /// <param name="Table"></param>
+        /// <param name="Where"></param>
+        /// <returns></returns>
         I_QueryResult GetTableData(I_DbTable Table, I_DbWhereStatement Where);
     }
 

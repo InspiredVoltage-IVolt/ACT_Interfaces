@@ -1,0 +1,11 @@
+D:\IVolt_Releases\ACT-Interfaces\Release\net6.0\ACT_Interfaces.deps.json
+D:\IVolt_Releases\ACT-Interfaces\Release\net6.0\ACT_Interfaces.dll
+D:\IVolt_Releases\ACT-Interfaces\Release\net6.0\ref\ACT_Interfaces.dll
+D:\IVolt_Releases\ACT-Interfaces\Release\net6.0\ACT_Interfaces.pdb
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces_Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces_Library.AssemblyInfoInputs.cache
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces_Library.AssemblyInfo.cs
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces_Library.csproj.CoreCompileInputs.cache
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces.dll
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ref\ACT_Interfaces.dll
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces.pdb

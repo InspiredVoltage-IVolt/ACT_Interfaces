@@ -13,6 +13,8 @@
 
     public interface I_Encryption
     {
+        string NarrowEncrypt(string ClearText, bool UseUser = true, bool UseMachine = false);
+        string NarrowDecrypt(string ClearText, bool UseUser = true, bool UseMachine = false);
         string Encrypt(string ClearText);
         string Encrypt(string clearText, string Password);
         byte[] Encrypt(byte[] clearData, string Password);

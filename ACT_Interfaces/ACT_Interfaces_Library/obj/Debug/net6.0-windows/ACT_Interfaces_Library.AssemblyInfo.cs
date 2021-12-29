@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2020-2021 IVolt, LLC")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Full List of Interfaces")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.4")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACT_Interfaces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACT_Interfaces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.4")]

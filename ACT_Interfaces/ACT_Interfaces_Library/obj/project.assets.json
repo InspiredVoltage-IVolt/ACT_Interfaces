@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
+    "net6.0": {
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -560,7 +560,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
+    "net6.0": [
       "System.Data.SqlClient >= 4.8.3",
       "System.Drawing.Common >= 6.0.0"
     ]
@@ -571,7 +571,7 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "2.0.3",
+    "version": "2.0.6",
     "restore": {
       "projectUniqueName": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",
@@ -592,7 +592,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
@@ -601,8 +601,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -613,8 +613,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "System.Data.SqlClient": {
             "target": "Package",

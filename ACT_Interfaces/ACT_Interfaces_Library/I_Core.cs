@@ -1,18 +1,16 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: ACT.Core.Interfaces.I_Core
-// Assembly: ACT_CORE_DLL, Version=1.81.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 2BD768EC-CB72-47CA-A911-138C5E31192C
-// Assembly location: D:\IVolt_Development\Common\Kinguin\KinguinAPI_Solution\KinguinAPI_TestConsole\bin\Debug\net5.0\ACT_CORE_DLL.dll
-using ACT.Core.Interfaces.Common;
+﻿using ACT.Core.Interfaces.Common;
 
 namespace ACT.Core.Interfaces
 {
     /// <summary>Core Functionality Definition</summary>
-    public interface I_Core : IDisposable, Encoding.I_TextEncoder, I_ErrorLoggable, Reflection.I_PropertyManager
+    public interface I_Core : IDisposable, I_ErrorLoggable, Reflection.I_PropertyManager
     {
+        /// <summary>
+        /// Has Cached Errors
+        /// </summary>
         bool CacheErrors { get; set; }
 
-        /// <summary>Standard Text Replacement Functionality - Powerful If Implemented Properly</summary>
+        /// <summary>Standard Text Replacement Functionality - Powerful If Implemented Properly   HI MY NAME IS ###FIRSTNAME###</summary>
         /// <param name="instr"></param>
         /// <returns></returns>
         string PerformStandardTextReplacement(string instr);
@@ -30,6 +28,14 @@ namespace ACT.Core.Interfaces
         /// <returns>I_TestResult - Specifying changes needed to be made to obtain a good health report.</returns>
         I_Result HealthCheck();
 
+        /// <summary>
+        /// Event is triggered when something in the class has changed.
+        /// </summary>
         event EventHandler ClassChanged;
+
+        /// <summary>
+        /// List of properties monitoried by the ClassChanged Event.
+        /// </summary>
+        List<string> PropertiesMonitoredForChange { get; set; }
     }
 }

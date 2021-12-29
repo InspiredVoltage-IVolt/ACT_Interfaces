@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ACT.Core.Interfaces.Common;
-
-namespace ACT.Core.Interfaces.DataAccess
+﻿namespace ACT.Core.Interfaces.DataAccess
 {
     public interface I_QueryResult : I_Core
     {
@@ -20,14 +14,13 @@ namespace ACT.Core.Interfaces.DataAccess
         System.Data.DataTable FirstTable { get; }
         System.Data.DataTable FirstDataTable_WithRows();
         bool FirstQueryHasExceptions { get; }
-        
+
         bool HasValidData { get; }
         bool HasRows();
 
         object GetValue(string ColumnName, int Row = 0);
 
-
         bool Test_Return_Data(string ErrorMessageForClient, bool TestForNoRecords, bool NoRecordsIsClientIssue, bool TestForNULLValue, bool NULLValueIsClientIssue, bool TestForBlankValue, bool BlankValueIsClientIssue, bool TestForMoreThanOneRecord, bool MoreThanOneRecorIsClientIssue);
-        
+
     }
 }

@@ -1,9 +1,13 @@
-﻿namespace ACT.Core.Interfaces.Encoding
+﻿using ACT.Core.Interfaces.Common;
+/// <summary>
+/// Custom Encoding
+/// </summary>
+namespace ACT.Core.Interfaces.Encoding
 {
     /// <summary>
     /// Basic Encoding Only
     /// </summary>
-    public interface I_TextEncoder
+    public interface I_TextEncoder : I_Plugin
     {
         string[] AvailableEncodingFormats { get; }
         string EncodeText(string Input, string Format, I_EncoderRules Rules);

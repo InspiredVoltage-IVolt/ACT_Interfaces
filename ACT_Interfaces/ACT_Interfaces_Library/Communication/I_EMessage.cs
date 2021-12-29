@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ACT.Core.Interfaces.Communication
+﻿namespace ACT.Core.Interfaces.Communication
 {
 
     public interface I_EDataRecord
@@ -12,7 +6,7 @@ namespace ACT.Core.Interfaces.Communication
         byte[] uniqueRecordID { get; }
         byte[] requestHistory { get; }
         byte[] ownerID { get; }
-        byte[] rawData { get; }        
+        byte[] rawData { get; }
     }
 
     public interface I_EDataLog
@@ -25,8 +19,7 @@ namespace ACT.Core.Interfaces.Communication
 
 
     }
-///708-655-5167
-///PLO-8LO-OLKI-OKLI
+
 
     public interface I_EMessageData
     {

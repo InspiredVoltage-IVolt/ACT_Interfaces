@@ -16,8 +16,9 @@ namespace ACT.Core.Interfaces.Graphics
         void DrawRectangle(int x, int y, Rectangle r, System.Drawing.Color c, int LineWidth, bool InsideBoundry = true);
         void DrawLine(int x, int y, int x2, int y2, System.Drawing.Color c, int LineWidth, bool InsideBoundry = true);
     }
+
     public interface I_Effect
     {
-
+        // Not Implemented
     }
 }

@@ -6,17 +6,11 @@
 // Last Modified By : MarkAlicz
 // Last Modified On : 02-26-2019
 // ***********************************************************************
-// <copyright file="I_Dataset.cs" company="Stonegate Intel LLC">
+// <copyright file="I_Dataset.cs" company="IVolt, LLC">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.AI
 {

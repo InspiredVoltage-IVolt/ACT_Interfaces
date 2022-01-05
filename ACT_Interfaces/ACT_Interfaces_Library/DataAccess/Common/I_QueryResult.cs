@@ -6,7 +6,7 @@
 // Last Modified By : MarkAlicz
 // Last Modified On : 02-26-2019
 // ***********************************************************************
-// <copyright file="I_QueryResult.cs" company="Stonegate Intel LLC">
+// <copyright file="I_QueryResult.cs" company="IVolt, LLC">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>
@@ -17,10 +17,10 @@ namespace ACT.Core.Interfaces.DataAccess
     /// <summary>
     /// Represents a Query result that holds the data at the exceptions to any queries
     /// Implements the <see cref="ACT.Core.Interfaces.I_Core" />
-    /// Implements the <see cref="ACT.Core.Interfaces.Serialization.I_CacheAble" />
+    /// Implements the <see cref="ACT.Core.Interfaces.IO.I_CacheAble" />
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
-    /// <seealso cref="ACT.Core.Interfaces.Serialization.I_CacheAble" />
+    /// <seealso cref="ACT.Core.Interfaces.IO.I_CacheAble" />
     public interface I_QueryResult : I_Core, ACT.Core.Interfaces.IO.I_CacheAble
     {
         /// <summary>

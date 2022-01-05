@@ -6,7 +6,7 @@
 // Last Modified By : MarkAlicz
 // Last Modified On : 02-26-2019
 // ***********************************************************************
-// <copyright file="I_ML_Component.cs" company="Stonegate Intel LLC">
+// <copyright file="I_ML_Component.cs" company="IVolt, LLC">
 //     Copyright ©  2019
 // </copyright>
 // <summary></summary>

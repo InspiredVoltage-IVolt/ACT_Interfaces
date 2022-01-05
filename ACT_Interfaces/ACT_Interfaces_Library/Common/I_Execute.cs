@@ -35,7 +35,7 @@ namespace ACT.Core.Interfaces.Common
         /// <summary>
         /// Executes this instance.
         /// </summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Execute();
         /// <summary>
         /// Gets or sets a value indicating whether [needs execute].
@@ -58,7 +58,7 @@ namespace ACT.Core.Interfaces.Common
         /// Executes the specified parameters.
         /// </summary>
         /// <param name="Params">The parameters.</param>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Execute(object[] Params);
         /// <summary>
         /// Gets or sets a value indicating whether [needs execute].

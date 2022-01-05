@@ -9,3 +9,4 @@ D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Re
 D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces.dll
 D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ref\ACT_Interfaces.dll
 D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces.pdb
+D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\obj\Release\net6.0\ACT_Interfaces_Library.csproj.AssemblyReference.cache

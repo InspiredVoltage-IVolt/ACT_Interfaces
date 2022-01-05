@@ -21,7 +21,7 @@
         /// </summary>
         /// <param name="PropertyName">Case Sensitive Property Name</param>
         /// <param name="value">value</param>
-        /// <returns>I_TestResult - Specifying if the Set was successfull</returns>
+        /// <returns>I_Result - Specifying if the Set was successfull</returns>
         Common.I_Result SetPropertyValue(string PropertyName, object value);
     }
 }

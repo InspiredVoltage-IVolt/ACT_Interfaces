@@ -1,47 +1,79 @@
-﻿using ACT.Core.Interfaces.Common;
+﻿// ***********************************************************************
+// Assembly         : ACT_Core
+// Author           : MarkAlicz
+// Created          : 02-26-2019
+//
+// Last Modified By : MarkAlicz
+// Last Modified On : 02-26-2019
+// ***********************************************************************
+// <copyright file="I_DataAccess.cs" company="Stonegate Intel LLC">
+//     Copyright ©  2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using ACT.Core.Interfaces.Common;
+using ACT.Core.Interfaces.Security;
+
 
 namespace ACT.Core.Interfaces.DataAccess
 {
+    /// <summary>
+    /// Represents the DataAccess Class
+    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// </summary>
+    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
     public interface I_DataAccess : I_Plugin
     {
         /// <summary>
-        /// Create table from a Class 
+        /// Execute a Stored Procedure Return the Type Indicated from the Column Indicated.
         /// </summary>
-        /// <param name="Class"></param>
-        /// <param name="SQL"></param>
-        /// <param name="AutoExecute"></param>
-        /// <param name="CreateIdentity"></param>
-        /// <param name="Recursive"></param>
-        void CreateTableFromI_CoreObject(object Class, out string SQL, bool AutoExecute = false, bool CreateIdentity = true, bool Recursive = false);
+        /// <typeparam name="T">Return Type</typeparam>
+        /// <param name="Name">Stored Procedure Name</param>
+        /// <param name="Parameters">SQL Parameters</param>
+        /// <param name="ColumnToReturn">Column Ordinal Position to return</param>
+        /// <returns>T Single Value</returns>
+        T ExecuteDynamicProcedure<T>(string Name, Dictionary<string, object> Parameters, int ColumnToReturn = 0);
+
+
+        /// <summary>
+        /// Create Table from ICoreObject - creates All the Columns based on Properties in the ICore Object.
+        /// </summary>
+        /// <param name="Class">The class.</param>
+        /// <param name="SQL">The SQL.</param>
+        /// <param name="AutoExecute">if set to <c>true</c> [automatic execute].</param>
+        /// <param name="CreateIdentity">if set to <c>true</c> [create identity].</param>
+        /// <param name="Recursive">if set to <c>true</c> [recursive].</param>
+        void CreateTableFromICoreObject(object Class, out string SQL, bool AutoExecute = false, bool CreateIdentity = true, bool Recursive = false);
+
 
         /// <summary>
         /// Generates The Where Statement Based On the IDbWhereStatement
         /// </summary>
-        /// <param name="WhereStatement"></param>
-        /// <returns></returns>
+        /// <param name="Where">The where.</param>
+        /// <param name="WhereStatement">The where statement.</param>
+        /// <returns>System.String.</returns>
         string GenerateWhereStatement(I_DbWhereStatement Where, string WhereStatement);
 
         /// <summary>
         /// Generates a list of Parameters use in the SQL Action
         /// </summary>
-        /// <param name="Where"></param>
-        /// <returns></returns>
+        /// <param name="Where">The where.</param>
+        /// <returns>List&lt;System.Data.IDataParameter&gt;.</returns>
         List<System.Data.IDataParameter> GenerateWhereStatementParameters(I_DbWhereStatement Where);
 
         /// <summary>
-        /// Authenticate User Based On Only Username and Password
+        /// Authenticates the user.
         /// </summary>
-        /// <param name="UserName"></param>
-        /// <param name="Password"></param>
-        /// <returns></returns>
-        Security.I_UserInfo AuthenticateUser(string UserName, string Password);
-
+        /// <param name="UserName">Name of the user.</param>
+        /// <param name="Password">The password.</param>
+        /// <returns>I_UserInfo.</returns>
+        I_UserInfo AuthenticateUser(string UserName, string Password);
         /// <summary>
-        /// Authenticate the user against the database.
+        /// Authenticates the user.
         /// </summary>
-        /// <param name="User">User Info</param>
-        /// <returns></returns>
-        bool AuthenticateUser(Security.I_UserInfo User);
+        /// <param name="User">The user.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        bool AuthenticateUser(I_UserInfo User);
 
 
         /// <summary>
@@ -53,17 +85,15 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="CmdType">Type of Command - System.Data.CommandType</param>
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(string CommandText, List<System.Data.IDataParameter> Params, bool ReturnsRows, System.Data.CommandType CmdType);
-
         /// <summary>
         /// Performs a Database Action.  All Indexes must match- i.e Command[0] with Param[0]
         /// </summary>
         /// <param name="CommandTexts">SQL Commands to Execute</param>
         /// <param name="Params">List of a List of Params to Pass - System.Data.IDataParameter</param>
         /// <param name="ReturnsRows">List of Trap the return tables?</param>
-        /// <param name="CmdType">Type of Command - System.Data.CommandType</param>
+        /// <param name="CmdTypes">The command types.</param>
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(List<string> CommandTexts, List<List<System.Data.IDataParameter>> Params, List<bool> ReturnsRows, List<System.Data.CommandType> CmdTypes);
-
         /// <summary>
         /// Performs a Database Action.  All Indexes must match- i.e Command[0] with Param[0]
         /// </summary>
@@ -72,27 +102,27 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="ReturnsRows">List of Trap the return tables?</param>
         /// <param name="UseTransactions">This will wrap the Commands in 1 Transaction</param>
         /// <param name="AutoRollback">This will auto rollback the transaction on a failer</param>
-        /// <param name="CmdType">Type of Command - System.Data.CommandType</param>
+        /// <param name="CmdTypes">The command types.</param>
         /// <returns>IQueryResult</returns>
         I_QueryResult RunCommand(List<string> CommandTexts, List<List<System.Data.IDataParameter>> Params, List<bool> ReturnsRows, bool UseTransactions, bool AutoRollback, List<System.Data.CommandType> CmdTypes);
 
         /// <summary>
-        /// Execute Bulk Insert (Fast Fast)
+        /// Executes the bulk insert.
         /// </summary>
-        /// <param name="BulkData"></param>
-        /// <param name="TableName"></param>
-        /// <param name="BulkCopyOptions"></param>
-        /// <returns></returns>
+        /// <param name="BulkData">The bulk data.</param>
+        /// <param name="TableName">Name of the table.</param>
+        /// <param name="BulkCopyOptions">The bulk copy options.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult ExecuteBulkInsert(System.Data.DataTable BulkData, string TableName, System.Data.SqlClient.SqlBulkCopyOptions BulkCopyOptions);
 
         /// <summary>
-        /// Execute Bulk Insert (Fast Fast) With Column Mapping
+        /// Executes the bulk insert.
         /// </summary>
-        /// <param name="BulkData"></param>
-        /// <param name="TableName"></param>
-        /// <param name="BulkCopyOptions"></param>
-        /// <param name="addColumnMapping"></param>
-        /// <returns></returns>
+        /// <param name="BulkData">The bulk data.</param>
+        /// <param name="TableName">Name of the table.</param>
+        /// <param name="BulkCopyOptions">The bulk copy options.</param>
+        /// <param name="addColumnMapping">if set to <c>true</c> [add column mapping].</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult ExecuteBulkInsert(System.Data.DataTable BulkData, string TableName, System.Data.SqlClient.SqlBulkCopyOptions BulkCopyOptions, bool addColumnMapping);
 
         /// <summary>
@@ -119,19 +149,21 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <summary>
         /// Returns true if Database Connection is Active
         /// </summary>
+        /// <value><c>true</c> if connected; otherwise, <c>false</c>.</value>
         bool Connected { get; }
 
         /// <summary>
         /// Returns the Connection String.
         /// </summary>
+        /// <value>The connection string.</value>
         string ConnectionString { get; }
 
         /// <summary>
-        /// 
+        /// Gets the stored SQL query.
         /// </summary>
-        /// <param name="Name"></param>
-        /// <param name="GroupName"></param>
-        /// <returns></returns>
+        /// <param name="Name">The name.</param>
+        /// <param name="GroupName">Name of the group.</param>
+        /// <returns>System.String.</returns>
         string GetStoredSQLQuery(string Name, string GroupName);
 
         /// <summary>
@@ -152,13 +184,13 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <summary>
         /// Sets the Current Command Timeout In Seconds
         /// </summary>
-        /// <param name="Seconds"></param>
+        /// <param name="Seconds">The seconds.</param>
         void SetCommandTimeout(int Seconds);
 
         /// <summary>
         /// Export the Current Database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>I_Db.</returns>
         I_Db ExportDatabase();
 
         /// <summary>
@@ -188,7 +220,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="TableName">Table Name To Insert Data Into</param>
         /// <param name="FieldsAndValues">Fields and Values To Insert</param>
-        /// <returns></returns>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult InsertData(string TableName, Dictionary<string, object> FieldsAndValues);
 
         /// <summary>
@@ -209,88 +241,83 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <returns>IQueryResult</returns>
         I_QueryResult DeleteData(string TableName, I_DbWhereStatement Where);
 
-        /// <summary>
-        /// Duplicate Rows BasedOn the Where Statement
-        /// </summary>
-        /// <param name="TableName"></param>
-        /// <param name="Where"></param>
-        /// <returns></returns>
-        I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where);
 
         /// <summary>
-        /// Duplicate Rows BasedOn the Where Statement Limit to the First x Number
+        /// Duplicates the row.
         /// </summary>
-        /// <param name="TableName">Table Name</param>
-        /// <param name="Where"></param>
-        /// <param name="Number">Limit to First Number Of Rows</param>
-        /// <returns></returns>
+        /// <param name="TableName">Name of the table.</param>
+        /// <param name="Where">The where.</param>
+        /// <returns>I_QueryResult.</returns>
+        I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where);
+        /// <summary>
+        /// Duplicates the row.
+        /// </summary>
+        /// <param name="TableName">Name of the table.</param>
+        /// <param name="Where">The where.</param>
+        /// <param name="Number">The number.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where, int Number);
 
+
+
         /// <summary>
-        /// Insert Data
+        /// Inserts the data.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult InsertData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
-
         /// <summary>
-        /// Update Data
+        /// Updates the data.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <param name="Where"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <param name="Where">The where.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, I_DbWhereStatement Where);
-
         /// <summary>
-        /// Update Data
+        /// Updates the data.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
-
         /// <summary>
-        /// Delete Data
+        /// Deletes the data.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="Where"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="Where">The where.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult DeleteData(I_DbTable Table, I_DbWhereStatement Where);
-
         /// <summary>
         /// Special Function.  You can use the to clean databases when you are really deleting items.  FK Erros would occur otherwise
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <param name="RecursiveDelete"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <param name="RecursiveDelete">if set to <c>true</c> [recursive delete].</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult DeleteData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, bool RecursiveDelete);
-
         /// <summary>
-        /// Duplicate Row
+        /// Duplicates the row.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
-
         /// <summary>
-        /// Duplicate Row With Limit
+        /// Duplicates the row.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="FieldsAndValues"></param>
-        /// <param name="Number"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="FieldsAndValues">The fields and values.</param>
+        /// <param name="Number">The number.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, int Number);
-
         /// <summary>
-        /// Get Table Data
+        /// Gets the table data.
         /// </summary>
-        /// <param name="Table"></param>
-        /// <param name="Where"></param>
-        /// <returns></returns>
+        /// <param name="Table">The table.</param>
+        /// <param name="Where">The where.</param>
+        /// <returns>I_QueryResult.</returns>
         I_QueryResult GetTableData(I_DbTable Table, I_DbWhereStatement Where);
     }
 

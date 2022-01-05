@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "s8+HsdIW6eYnjhaX/joXIAP7X9PFM2NGui/7ipkorErYQlBejC3s4W5srnr5T/24yticsJrTgu4M2oLO2bU9Mw==",
+  "dgSpecHash": "4TZrNFBQ9r9BzJP5gmSX3obCh3wFju++8I6CTVXrkGM7izg6Yq6uHNjiAMOeTdFuiCXWxPs63HEloPujUVP+cA==",
   "success": true,
   "projectFilePath": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MarkAlicz\\.nuget\\packages\\act_enums\\2.0.6\\act_enums.2.0.6.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

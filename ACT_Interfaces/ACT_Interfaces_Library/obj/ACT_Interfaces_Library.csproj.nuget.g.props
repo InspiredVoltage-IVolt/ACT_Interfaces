@@ -14,4 +14,14 @@
     <SourceRoot Include="D:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)act_enums\2.0.6\contentFiles\any\net6.0\Icon.ico" Condition="Exists('$(NuGetPackageRoot)act_enums\2.0.6\contentFiles\any\net6.0\Icon.ico')">
+      <NuGetPackageId>ACT_Enums</NuGetPackageId>
+      <NuGetPackageVersion>2.0.6</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>Icon.ico</Link>
+    </Content>
+  </ItemGroup>
 </Project>

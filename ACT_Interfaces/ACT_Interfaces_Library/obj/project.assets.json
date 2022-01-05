@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ACT_Enums/2.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ACT_Enums.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ACT_Enums.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/Icon.ico": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -177,6 +193,21 @@
     }
   },
   "libraries": {
+    "ACT_Enums/2.0.6": {
+      "sha512": "8zRoHWLLnFLbi4iz1EzM8i38jdcYic6Uq2vwckJ7FGORUZYq6waTNkjH14UpCGtMQAjjVwUMiNI1VVAhmgXv+A==",
+      "type": "package",
+      "path": "act_enums/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ACT_Common_Icon.png",
+        "act_enums.2.0.6.nupkg.sha512",
+        "act_enums.nuspec",
+        "content/Icon.ico",
+        "contentFiles/any/net6.0/Icon.ico",
+        "lib/net6.0/ACT_Enums.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -561,6 +592,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ACT_Enums >= 2.0.6",
       "System.Data.SqlClient >= 4.8.3",
       "System.Drawing.Common >= 6.0.0"
     ]
@@ -595,9 +627,8 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
-        "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://actnuget.homeunix.com:5555/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -616,6 +647,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "ACT_Enums": {
+            "target": "Package",
+            "version": "[2.0.6, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.3, )"

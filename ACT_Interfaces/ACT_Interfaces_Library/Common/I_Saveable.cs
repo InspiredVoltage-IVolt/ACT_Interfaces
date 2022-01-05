@@ -23,23 +23,23 @@ namespace ACT.Core.Interfaces.Common
         string[] AvailableFileFormats { get; }
 
         /// <summary>Saves this instance.</summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Save(string FileFormat = "");
 
         /// <summary>Saves this instance.</summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Save(string Destination, string FileFormat = "");
 
         /// <summary>Saves this instance to a memory location.</summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Save(IntPtr ptr, string FileFormat = "");
 
         /// <summary>Deletes this instance.</summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Delete();
 
         /// <summary>Deletes this instance.</summary>
-        /// <returns>I_TestResult.</returns>
+        /// <returns>I_Result.</returns>
         I_Result Delete(Guid TestResult_TransactionID);
     }
 

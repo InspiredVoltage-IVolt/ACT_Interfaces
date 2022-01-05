@@ -25,7 +25,7 @@ namespace ACT.Core.Interfaces
         /// <summary>
         /// Checks The Health Of The Class.  Use this to return missing configuration.  Invalid Permissions Etc..
         /// </summary>
-        /// <returns>I_TestResult - Specifying changes needed to be made to obtain a good health report.</returns>
+        /// <returns>I_Result - Specifying changes needed to be made to obtain a good health report.</returns>
         I_Result HealthCheck();
 
         /// <summary>

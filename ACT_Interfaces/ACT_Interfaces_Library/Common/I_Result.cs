@@ -6,7 +6,7 @@
 // Last Modified By : MarkAlicz
 // Last Modified On : 02-26-2021
 // ***********************************************************************
-// <copyright file="I_TestResult.cs" company="IVolt, LLC">
+// <copyright file="I_Result.cs" company="IVolt, LLC">
 //     Copyright ©  2021
 // </copyright>
 // <summary></summary>

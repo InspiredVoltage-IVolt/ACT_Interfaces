@@ -21,6 +21,19 @@ namespace ACT.Core.Interfaces.Common
     public interface I_ErrorLoggable
     {
         /// <summary>
+        /// OverRide Current Plugin With Specified One
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        bool OverRidePlugin(I_Plugin pluginData);
+
+        /// <summary>
+        /// Quick Error Logger
+        /// </summary>
+        /// <param name="Information">Information To Log</param>
+        void QuickLog(string Information);
+
+        /// <summary>
         /// Logs the Error
         /// </summary>
         /// <param name="className">Name of the class the error occured</param>
@@ -28,7 +41,7 @@ namespace ACT.Core.Interfaces.Common
         /// <param name="ex">Exception</param>
         /// <param name="additionInformation">Additional Information</param>
         /// <param name="errorType">Error Type</param>
-        void LogError(string className, string summary, Exception ex, string additionInformation, string errorType);
+        void LogError(string className, string summary, Exception ex, string additionInformation, ACT.Core.Enums.ErrorLevel errorType);
 
         /// <summary>
         /// Logs the Error only in DEBUG MODE
@@ -38,7 +51,9 @@ namespace ACT.Core.Interfaces.Common
         /// <param name="ex">Exception</param>
         /// <param name="additionInformation">Additional Information</param>
         /// <param name="errorType">Error Type</param>
-        void DLogError(string className, string summary, Exception ex, string additionInformation, string errorType);
+        /// 
+
+        void DLogError(string className, string summary, Exception ex, string additionInformation, ACT.Core.Enums.ErrorLevel errorType);
     }
 
 }

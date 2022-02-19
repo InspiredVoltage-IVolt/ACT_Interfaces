@@ -8,6 +8,36 @@ namespace ACT.Core.Interfaces.Common
     public interface I_Plugin : I_Core
     {
         /// <summary>
+        /// Author Information
+        /// </summary>
+        I_Author Author { get; }
+
+        /// <summary>
+        /// Indicate if this is a ACT built in Plugin or Not
+        /// </summary>
+        bool IsACTInternal { get; }
+
+        /// <summary>
+        /// DLLFileName
+        /// </summary>
+        string DLLFileName { get; }
+
+        /// <summary>
+        /// Types and Classes Implemented.  With Priority
+        /// </summary>
+        Dictionary<Type, Dictionary<int, string>> TypesAndClassNames { get; }
+
+        /// <summary>
+        /// Package Name to Download
+        /// </summary>
+        string GitHubPackageName { get; }
+
+        /// <summary>
+        /// Version of the Package To Retrieve
+        /// </summary>
+        string GitHubPackageVersion { get; }
+
+        /// <summary>
         /// Sets the Impersonation of the Executing User Level
         /// </summary>
         /// <param name="UserInfo"></param>

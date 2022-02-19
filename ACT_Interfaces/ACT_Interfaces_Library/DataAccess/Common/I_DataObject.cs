@@ -11,11 +11,6 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.DataAccess
 {
@@ -28,7 +23,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets the primary key.
         /// </summary>
         /// <value>The primary key.</value>
-        string PrimaryKey { get;  }
+        string PrimaryKey { get; }
         /// <summary>
         /// Updates this instance.
         /// </summary>
@@ -39,5 +34,8 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <returns>I_QueryResult.</returns>
         I_QueryResult Create();
+
+
+
     }
 }

@@ -3,17 +3,35 @@
 namespace ACT.Core.Interfaces
 {
     /// <summary>Core Functionality Definition</summary>
-    public interface I_Core : IDisposable, I_ErrorLoggable, Reflection.I_PropertyManager
+    public interface I_Core : IDisposable, Reflection.I_PropertyManager
     {
+        /// <summary>
+        /// Required Configuration Properties
+        /// </summary>
+        List<string> RequiredProperties { get; set; }
+
+        /// <summary>
+        /// Resources\\......  File  Can Be "jsonname.json"  or "\\myapp\\myfile.json"
+        /// Always will be looked for in Current Domain Base Directory\\Resources\\
+        /// Unless FULL PATH SPECIFIED
+        /// </summary>
+        string ConfigurationJSONFileName { get; set; }
+
         /// <summary>
         /// Has Cached Errors
         /// </summary>
         bool CacheErrors { get; set; }
 
+        /// <summary>
+        /// Looks to see if the Configuration Attribute defines a value.
+        /// </summary>
+        /// <returns>usually a string, or List<string></returns>
+        public dynamic GetConfigurationValue(string Key);
+
         /// <summary>Standard Text Replacement Functionality - Powerful If Implemented Properly   HI MY NAME IS ###FIRSTNAME###</summary>
         /// <param name="instr"></param>
         /// <returns></returns>
-        string PerformStandardTextReplacement(string instr);
+        string PerformStandardTextReplacement(string instr, Enums.RepacementStandard ReplacementFormats);
 
         /// <summary>Returns the Errors stored in the local variable</summary>
         /// <returns><![CDATA[List<Exception>]]></returns>

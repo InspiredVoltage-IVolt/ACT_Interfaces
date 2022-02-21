@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ACT_Interfaces</id>
+    <version>2.1.0</version>
+    <authors>IVolt, Mark Alicz, Darkbit</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">GPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/GPL-3.0-only</licenseUrl>
+    <icon>ACT_Common_Icon.png</icon>
+    <projectUrl>https://www.ivolt.io/</projectUrl>
+    <description>Full List of Interfaces</description>
+    <releaseNotes>Modified some Core Interfaces to add machine specific and user spacific protection.</releaseNotes>
+    <copyright>2020-2021 IVolt, LLC</copyright>
+    <tags>.NET 6, Interface Library, ACT Library</tags>
+    <repository type="git" url="https://github.com/InspiredVoltage-IVolt/ACT_Interfaces" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="ACT_Enums" version="2.0.6" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.3" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net6.0/ACT_Interfaces.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\IVolt_Releases\ACT-Interfaces\ARM64\ARM\net6.0\ACT_Interfaces.dll" target="lib\net6.0\ACT_Interfaces.dll" />
+    <file src="D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\ACT_Interfaces.ico" target="content\ACT_Interfaces.ico" />
+    <file src="D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\ACT_Interfaces.ico" target="contentFiles\any\net6.0\ACT_Interfaces.ico" />
+    <file src="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_Interfaces_Library\ACT_Common_Icon.png" target="\ACT_Common_Icon.png" />
+  </files>
+</package>

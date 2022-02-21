@@ -23,6 +23,11 @@ namespace ACT.Core.Interfaces.Common
         string DLLFileName { get; }
 
         /// <summary>
+        /// Used for when a Plugin Can Implement Different End Implementations
+        /// </summary>
+        string SubIdentifier { get; }
+
+        /// <summary>
         /// Types and Classes Implemented.  With Priority
         /// </summary>
         Dictionary<Type, Dictionary<int, string>> TypesAndClassNames { get; }

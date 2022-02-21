@@ -639,7 +639,7 @@
     "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "2.1.0",
+    "version": "2.1.1",
     "restore": {
       "projectUniqueName": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",

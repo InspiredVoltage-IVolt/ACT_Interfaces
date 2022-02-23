@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ACT_Interfaces</id>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
     <authors>IVolt, Mark Alicz, Darkbit</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">GPL-3.0-only</license>
@@ -27,7 +27,7 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="D:\IVolt_Releases\ACT-Interfaces\Debug\net6.0\ACT_Interfaces.dll" target="lib\net6.0\ACT_Interfaces.dll" />
+    <file src="D:\IVolt_Releases\ACT-Interfaces\ARM64\ARMDebug\net6.0\ACT_Interfaces.dll" target="lib\net6.0\ACT_Interfaces.dll" />
     <file src="D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\ACT_Interfaces.ico" target="content\ACT_Interfaces.ico" />
     <file src="D:\IVolt_Development\ACT_Interfaces\ACT_Interfaces\ACT_Interfaces_Library\ACT_Interfaces.ico" target="contentFiles\any\net6.0\ACT_Interfaces.ico" />
     <file src="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_Interfaces_Library\ACT_Common_Icon.png" target="\ACT_Common_Icon.png" />

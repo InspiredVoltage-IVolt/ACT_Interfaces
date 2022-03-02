@@ -41,7 +41,7 @@ namespace ACT.Core.Interfaces.Common
         /// <param name="ex">Exception</param>
         /// <param name="additionInformation">Additional Information</param>
         /// <param name="errorType">Error Type</param>
-        void LogError(string className, string summary, Exception ex, string additionInformation, ACT.Core.Enums.ErrorLevel errorType);
+        void LogError(string className, string summary, Exception ex, string additionInformation, Enums.Common.Error_Code_Severity errorType);
 
         /// <summary>
         /// Logs the Error only in DEBUG MODE
@@ -53,7 +53,7 @@ namespace ACT.Core.Interfaces.Common
         /// <param name="errorType">Error Type</param>
         /// 
 
-        void DLogError(string className, string summary, Exception ex, string additionInformation, ACT.Core.Enums.ErrorLevel errorType);
+        void DLogError(string className, string summary, Exception ex, string additionInformation, Enums.Common.Error_Code_Severity errorType);
     }
 
 }

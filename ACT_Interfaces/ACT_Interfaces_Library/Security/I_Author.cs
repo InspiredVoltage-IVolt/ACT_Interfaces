@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Security
 {
-    public interface I_Author
+    public interface I_Author : IO.I_Exportable<I_Author>
     {
         string Name { get; set; }
         string Email { get; set; }

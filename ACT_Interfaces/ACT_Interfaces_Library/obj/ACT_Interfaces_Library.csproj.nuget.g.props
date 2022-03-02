@@ -14,9 +14,9 @@
     <SourceRoot Include="D:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ItemGroup Condition="'$(ExcludeRestorePackageImports)' != 'true'">
-    <Content Include="$(NuGetPackageRoot)act_enums\2.0.6\contentFiles\any\net6.0\Icon.ico" Condition="Exists('$(NuGetPackageRoot)act_enums\2.0.6\contentFiles\any\net6.0\Icon.ico')">
+    <Content Include="$(NuGetPackageRoot)act_enums\2.1.2\contentFiles\any\net6.0\Icon.ico" Condition="Exists('$(NuGetPackageRoot)act_enums\2.1.2\contentFiles\any\net6.0\Icon.ico')">
       <NuGetPackageId>ACT_Enums</NuGetPackageId>
-      <NuGetPackageVersion>2.0.6</NuGetPackageVersion>
+      <NuGetPackageVersion>2.1.2</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Pack>false</Pack>
       <Private>False</Private>

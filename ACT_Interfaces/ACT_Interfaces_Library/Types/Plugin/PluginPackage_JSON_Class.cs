@@ -82,16 +82,7 @@ namespace ACT.Core.Types.PluginPackage
         public string EncryptionMethod { get; set; }
 
         [JsonProperty("additional-data", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Additional_Information> AdditionalData { get; set; } = new List<Additional_Information>();
-    }
-
-    public class Additional_Information
-    {
-        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
-        public string Name { get; set; }
-
-        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
-        public string Value { get; set; }
+        public List<Types.JSON.NameValue_Information> AdditionalData { get; set; } = new List<Types.JSON.NameValue_Information>();
     }
 
     public class Plugin_Type_Information

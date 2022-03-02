@@ -1,4 +1,6 @@
-﻿namespace ACT.Core.Interfaces.IO
+﻿using ACT.Core.Interfaces.IO;
+
+namespace ACT.Core.Interfaces.IO
 {
     /// <summary>
     /// I_Exportable is a general purpose interface to allow for dynamic importing and exporting.
@@ -19,3 +21,4 @@
         void Import(T item);
     }
 }
+

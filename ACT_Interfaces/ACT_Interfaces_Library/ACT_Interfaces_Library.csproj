@@ -11,7 +11,7 @@
     <SignAssembly>True</SignAssembly>
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.3</Version>
+    <Version>2.1.5</Version>
     <Authors>IVolt, Mark Alicz, Darkbit</Authors>
     <Description>Full List of Interfaces</Description>
     <Copyright>2020-2021 IVolt, LLC</Copyright>
@@ -22,8 +22,8 @@
     <PackageTags>.NET 6, Interface Library, ACT Library</PackageTags>
     <PackageReleaseNotes>Modified some Core Interfaces to add machine specific and user spacific protection.</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <AssemblyVersion>2.1.3</AssemblyVersion>
-    <FileVersion>2.1.3</FileVersion>
+    <AssemblyVersion>2.1.5</AssemblyVersion>
+    <FileVersion>2.1.5</FileVersion>
     <PackageLicenseExpression>  GPL-3.0-only</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <AssemblyName>ACT_Interfaces</AssemblyName>
@@ -73,7 +73,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="M:\Shared drives\Assets\IVolt_Product_Images\ACT\ACT_Interfaces_Library\ACT_Common_Icon.png">
+    <None Include="M:\Shared drives\Assets\__IVOLT_ALL_MEDIA-Assets\IVolt_Product_Images\ACT\ACT_Interfaces_Library\ACT_Common_Icon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -87,7 +87,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Types\NewFolder\" />
+    <Folder Include="Types\ManagerSupport\" />
   </ItemGroup>
 
 </Project>

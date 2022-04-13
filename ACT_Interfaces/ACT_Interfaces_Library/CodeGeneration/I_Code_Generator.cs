@@ -1,11 +1,6 @@
 ﻿namespace ACT.Core.Interfaces.CodeGeneration
 {
 
-
-
-
-
-
     /// <summary>
     /// Defines the Actual Code Generation Class
     /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />

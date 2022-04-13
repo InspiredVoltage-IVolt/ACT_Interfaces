@@ -64,7 +64,6 @@
 
         #endregion
 
-
         #region Generator Settings
         /// <summary>
         /// Gets or sets the output language.
@@ -111,7 +110,7 @@
         /// JSON string 
         /// <seealso cref="ACT.Core.Types.PluginPackage.ACT_Plugin_Package_Definition"/>
         /// </summary>
-        string Web_Service_Plugin_Generator{ get; set; }
+        string Web_Service_Plugin_Generator { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [generate view access].
@@ -154,7 +153,7 @@
         /// </summary>
         /// <value>The user code name space.</value>
         string UserCode_Namespace_Appendage_Name { get; set; }
-                
+
         /// <summary>
         /// Gets or sets the stored procedure namespace method path.
         /// TODO RESEARCH
@@ -230,7 +229,13 @@
 
         #endregion
 
+        #region Nuget Publish Information
 
+        string APIKeyIfNew { get; set; }
+        string PackageName { get; set; }
+        string Version { get; set; }
+        Types.JSON.NameValue_Information PackageInformation { get; set; }
 
+        #endregion
     }
 }

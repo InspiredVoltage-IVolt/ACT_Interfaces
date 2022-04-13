@@ -53,7 +53,7 @@ namespace ACT.Core.Interfaces.Security
         /// <param name="UserInfo"></param>
         /// <param name="Group"></param>
         /// <returns>bool</returns>
-        bool IsUserMemberOfGroup(Guid UserID, string GroupName, string AdditionalData);
+        bool IsUserMemberOfGroup(string UserID, string GroupName, string AdditionalData);
 
         /// <summary>
         /// Get The Group ID From The Name
@@ -73,7 +73,7 @@ namespace ACT.Core.Interfaces.Security
         /// </summary>
         /// <param name="UserID"></param>
         /// <param name="GroupID"></param>
-        I_ResultExpanded AddUserToGroup(Guid UserID, string GroupName, string AdditionalData);
+        I_ResultExpanded AddUserToGroup(string UserID, string GroupName, string AdditionalData);
 
         #endregion
 
@@ -89,7 +89,7 @@ namespace ACT.Core.Interfaces.Security
         /// </summary>
         /// <param name="UserID"></param>
         /// <returns>Encryption Key</returns>
-        string GetEncryptionKey(Guid UserID, string AdditionalData);
+        string GetEncryptionKey(string UserID, string AdditionalData);
 
         /// <summary>
         /// Get User ID
@@ -110,7 +110,7 @@ namespace ACT.Core.Interfaces.Security
         /// </summary>
         /// <param name="UserID"></param>
         /// <returns></returns>
-        I_UserInfo GetUserInfo(Guid UserID, string AdditionalData);
+        I_UserInfo GetUserInfo(string UserID, string AdditionalData);
 
         /// <summary>
         /// Creates A New User
@@ -136,7 +136,7 @@ namespace ACT.Core.Interfaces.Security
         /// <param name="Password">New Unencrypted Password</param>
         /// <param name="AdditionalData">Additional Data</param>
         /// <returns></returns>
-        I_ResultExpanded UpdatePassword(Guid UserID, string Password, string AdditionalData);
+        I_ResultExpanded UpdatePassword(string UserID, string Password, string AdditionalData);
 
         /// <summary>
         /// Update UserName
@@ -144,7 +144,7 @@ namespace ACT.Core.Interfaces.Security
         /// <param name="UserID"></param>
         /// <param name="UserName"></param>
         /// <returns></returns>
-        I_ResultExpanded UpdateUserName(Guid UserID, string UserName, string AdditionalData);
+        I_ResultExpanded UpdateUserName(string UserID, string UserName, string AdditionalData);
 
         /// <summary>
         /// Update Email
@@ -152,14 +152,14 @@ namespace ACT.Core.Interfaces.Security
         /// <param name="UserID"></param>
         /// <param name="Email"></param>
         /// <returns></returns>
-        I_ResultExpanded UpdateEmail(Guid UserID, string Email, string AdditionalData);
+        I_ResultExpanded UpdateEmail(string UserID, string Email, string AdditionalData);
 
         /// <summary>
         /// Delete User
         /// </summary>
         /// <param name="UserID"></param>
         /// <returns></returns>
-        I_ResultExpanded DeleteUser(Guid UserID, string AdditionalData);
+        I_ResultExpanded DeleteUser(string UserID, string AdditionalData);
 
         /// <summary>
         /// Adds a User To The 

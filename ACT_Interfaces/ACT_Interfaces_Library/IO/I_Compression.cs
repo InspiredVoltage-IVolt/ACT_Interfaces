@@ -3,15 +3,19 @@
     public interface I_Compression
     {
         string[] AvailableCompressionTypes { get; }
+                
+        int DeCompressFileToDisk(string FileToDeCompress, string Destination, string CompressionType);
+        byte[] DeCompressData(byte[] Data, string CompressionType);
 
-        byte[] CompressFile(string FileToCompress, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        byte[] DeCompressFile(string FileToDeCompress, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        byte[] CompressData(byte[] Data, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        byte[] DeCompressData(byte[] Data, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
+        byte[] CompressFile(string FileToCompress, string CompressionType);
+        bool CompressFile(string FileToCompress, string DestinationFileName, string CompressionType);
 
-        byte[] CompressFolder(string FolderToCompress, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        bool CompressFolder(string FolderToCompress, string OutputFileNameFullPath, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        void AddFileToZip(string FileToAdd, string ZipFile, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
-        void RemoveFileFromZip(string FileToRemove, string ZipFile, string CompressionType, Dictionary<string, dynamic> AdditionalInfo);
+
+        byte[] CompressData(byte[] Data, string CompressionType, Dictionary<string, byte[]> AdditionalInfo);
+        byte[] CompressFolder(string FolderToCompress, string CompressionType, Dictionary<string, byte[]> AdditionalInfo);
+        bool CompressFolder(string FolderToCompress, string DestinationFileName, string CompressionType, Dictionary<string, byte[]> AdditionalInfo);
+
+        void AddFileToZip(string FilePathToAdd, string ZipFilePath, string CompressionType);
+        void RemoveFileFromZip(string VirtualFilePathToRemove, string ZipFilePath, string CompressionType);
     }
 }

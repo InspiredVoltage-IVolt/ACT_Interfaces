@@ -19,10 +19,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// Represents the DataAccess Class
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_DataAccess : I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_DataAccess :  Plugins.I_Plugin 
     {
         /// <summary>
         /// Execute a Stored Procedure Return the Type Indicated from the Column Indicated.
@@ -52,14 +52,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Where">The where.</param>
         /// <param name="WhereStatement">The where statement.</param>
         /// <returns>System.String.</returns>
-        string GenerateWhereStatement(I_DbWhereStatement Where, string WhereStatement);
+        string GenerateWhereStatement(I_Db_Where_Statement Where, string WhereStatement);
 
         /// <summary>
         /// Generates a list of Parameters use in the SQL Action
         /// </summary>
         /// <param name="Where">The where.</param>
         /// <returns>List&lt;System.Data.IDataParameter&gt;.</returns>
-        List<System.Data.IDataParameter> GenerateWhereStatementParameters(I_DbWhereStatement Where);
+        List<System.Data.IDataParameter> GenerateWhereStatementParameters(I_Db_Where_Statement Where);
 
         /// <summary>
         /// Authenticates the user.
@@ -199,21 +199,21 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="OriginalTable">Original Table Structure</param>
         /// <param name="NewTable">New Table Structure</param>
         /// <returns>True on Success</returns>
-        bool ModifyTable(I_DbTable OriginalTable, I_DbTable NewTable);
+        bool ModifyTable(I_Db_Table OriginalTable, I_Db_Table NewTable);
 
         /// <summary>
         /// Create A Table
         /// </summary>
         /// <param name="NewTable">New Table Structure</param>
         /// <returns>True on Success</returns>
-        bool CreateTable(I_DbTable NewTable);
+        bool CreateTable(I_Db_Table NewTable);
 
         /// <summary>
         /// Drop / Remove a Table
         /// </summary>
         /// <param name="TableToDrop">Table To Drop</param>
         /// <returns>True on Success</returns>
-        bool DropTable(I_DbTable TableToDrop);
+        bool DropTable(I_Db_Table TableToDrop);
 
         /// <summary>
         /// Inserts Data Into the Table
@@ -230,7 +230,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="FieldsAndValues">Fields And Values</param>
         /// <param name="Where">Where statement defining scope of update</param>
         /// <returns>IQueryResult</returns>
-        I_QueryResult UpdateData(string TableName, Dictionary<string, object> FieldsAndValues, I_DbWhereStatement Where);
+        I_QueryResult UpdateData(string TableName, Dictionary<string, object> FieldsAndValues, I_Db_Where_Statement Where);
 
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="TableName">Table To Delete data From</param>
         /// <param name="Where">Where statement defining scope of delete</param>
         /// <returns>IQueryResult</returns>
-        I_QueryResult DeleteData(string TableName, I_DbWhereStatement Where);
+        I_QueryResult DeleteData(string TableName, I_Db_Where_Statement Where);
 
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="TableName">Name of the table.</param>
         /// <param name="Where">The where.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where);
+        I_QueryResult DuplicateRow(string TableName, I_Db_Where_Statement Where);
         /// <summary>
         /// Duplicates the row.
         /// </summary>
@@ -256,7 +256,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Where">The where.</param>
         /// <param name="Number">The number.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DuplicateRow(string TableName, I_DbWhereStatement Where, int Number);
+        I_QueryResult DuplicateRow(string TableName, I_Db_Where_Statement Where, int Number);
 
 
 
@@ -266,7 +266,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Table">The table.</param>
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult InsertData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+        I_QueryResult InsertData(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues);
         /// <summary>
         /// Updates the data.
         /// </summary>
@@ -274,21 +274,21 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <param name="Where">The where.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, I_DbWhereStatement Where);
+        I_QueryResult UpdateData(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues, I_Db_Where_Statement Where);
         /// <summary>
         /// Updates the data.
         /// </summary>
         /// <param name="Table">The table.</param>
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult UpdateData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+        I_QueryResult UpdateData(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues);
         /// <summary>
         /// Deletes the data.
         /// </summary>
         /// <param name="Table">The table.</param>
         /// <param name="Where">The where.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DeleteData(I_DbTable Table, I_DbWhereStatement Where);
+        I_QueryResult DeleteData(I_Db_Table Table, I_Db_Where_Statement Where);
         /// <summary>
         /// Special Function.  You can use the to clean databases when you are really deleting items.  FK Erros would occur otherwise
         /// </summary>
@@ -296,14 +296,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <param name="RecursiveDelete">if set to <c>true</c> [recursive delete].</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DeleteData(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, bool RecursiveDelete);
+        I_QueryResult DeleteData(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues, bool RecursiveDelete);
         /// <summary>
         /// Duplicates the row.
         /// </summary>
         /// <param name="Table">The table.</param>
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues);
+        I_QueryResult DuplicateRow(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues);
         /// <summary>
         /// Duplicates the row.
         /// </summary>
@@ -311,14 +311,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <param name="Number">The number.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult DuplicateRow(I_DbTable Table, Dictionary<I_DbColumn, object> FieldsAndValues, int Number);
+        I_QueryResult DuplicateRow(I_Db_Table Table, Dictionary<I_Db_Column, object> FieldsAndValues, int Number);
         /// <summary>
         /// Gets the table data.
         /// </summary>
         /// <param name="Table">The table.</param>
         /// <param name="Where">The where.</param>
         /// <returns>I_QueryResult.</returns>
-        I_QueryResult GetTableData(I_DbTable Table, I_DbWhereStatement Where);
+        I_QueryResult GetTableData(I_Db_Table Table, I_Db_Where_Statement Where);
     }
 
 }

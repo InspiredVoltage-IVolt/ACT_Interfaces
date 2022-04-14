@@ -25,7 +25,7 @@ namespace ACT.Core.Interfaces.Common
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        bool OverRidePlugin(I_Plugin pluginData);
+        bool OverRidePlugin( Plugins.I_Plugin  pluginData);
 
         /// <summary>
         /// Quick Error Logger

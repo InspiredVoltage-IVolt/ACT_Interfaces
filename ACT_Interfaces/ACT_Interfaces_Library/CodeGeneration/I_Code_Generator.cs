@@ -3,10 +3,10 @@
 
     /// <summary>
     /// Defines the Actual Code Generation Class
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_Code_Generator : ACT.Core.Interfaces.Common.I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_Code_Generator : ACT.Core.Interfaces.Plugins.I_Plugin 
     {
         /// <summary>
         /// Generates the code.

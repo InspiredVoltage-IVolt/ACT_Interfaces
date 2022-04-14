@@ -27,13 +27,13 @@ namespace ACT.Core.Interfaces.DataAccess
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
     /// <seealso cref="System.IComparable" />
-    public interface I_DbView : I_Core, IComparable
+    public interface I_Db_View : I_Core, IComparable
     {
         /// <summary>
         /// Enumerable List of Columns
         /// </summary>
         /// <value>The columns.</value>
-        BindingList<I_DbColumn> Columns { get; set; }
+        BindingList<I_Db_Column> Columns { get; set; }
 
         /// <summary>
         /// Parent Of This Table
@@ -70,7 +70,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="Column">The column.</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        bool AddColumn(I_DbColumn Column);
+        bool AddColumn(I_Db_Column Column);
 
         /// <summary>
         /// Get Column by Name
@@ -78,14 +78,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Name">The name.</param>
         /// <param name="IgnoreCase">if set to <c>true</c> [ignore case].</param>
         /// <returns>IDbColumn</returns>
-        I_DbColumn GetColumn(string Name, bool IgnoreCase);
+        I_Db_Column GetColumn(string Name, bool IgnoreCase);
 
         /// <summary>
         /// Get Column at Index Position
         /// </summary>
         /// <param name="Index">The index.</param>
         /// <returns>IDbColumn</returns>
-        I_DbColumn GetColumn(int Index);
+        I_Db_Column GetColumn(int Index);
 
         /// <summary>
         /// Age in Days

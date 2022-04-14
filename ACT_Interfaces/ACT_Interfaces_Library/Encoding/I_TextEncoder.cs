@@ -7,7 +7,7 @@ namespace ACT.Core.Interfaces.Encoding
     /// <summary>
     /// Basic Encoding Only
     /// </summary>
-    public interface I_TextEncoder : I_Plugin
+    public interface I_TextEncoder :  Plugins.I_Plugin 
     {
         string[] AvailableEncodingFormats { get; }
         string EncodeText(string Input, string Format, I_EncoderRules Rules);

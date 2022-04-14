@@ -5,7 +5,7 @@ namespace ACT.Core.Interfaces.Security
     /// <summary>
     /// Defines a Basic Placeholder for passing User State
     /// </summary>
-    public interface I_UserAddress : I_Plugin, I_Saveable
+    public interface I_UserAddress :  Plugins.I_Plugin , I_Saveable
     {
         string ID { get; set; }
         string Name { get; set; }

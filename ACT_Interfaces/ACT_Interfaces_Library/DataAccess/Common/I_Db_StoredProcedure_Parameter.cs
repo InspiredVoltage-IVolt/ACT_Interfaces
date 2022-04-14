@@ -22,10 +22,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// Interface I_DbStoredProcedureParameter
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_DbStoredProcedureParameter : I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_Db_StoredProcedure_Parameter :  Plugins.I_Plugin 
     {
 
         /// <summary>

@@ -26,7 +26,7 @@ namespace ACT.Core.Interfaces.DataAccess
     /// Implements the <see cref="ACT.Core.Interfaces.I_Core" />
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
-    public interface I_DbRelationship : I_Core
+    public interface I_Db_Relationship : I_Core
     {
         /// <summary>
         /// Gets or sets a value indicating whether [multi field relationship].

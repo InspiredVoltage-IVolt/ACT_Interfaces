@@ -28,7 +28,7 @@ namespace ACT.Core.Interfaces.DataAccess
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
     /// <seealso cref="ACT.Core.Interfaces.Common.I_Saveable" />
-    public interface I_DBObject : I_Core, I_Saveable
+    public interface I_Db_Object : I_Core, I_Saveable
     {
 
         /// <summary>

@@ -2,7 +2,7 @@ using ACT.Core.Interfaces.Common;
 
 namespace ACT.Core.Interfaces.Security
 {
-    public interface I_LoginResult : I_Plugin
+    public interface I_LoginResult :  Plugins.I_Plugin 
     {
         bool Success { get; set; }
         string TokenID { get; set; }

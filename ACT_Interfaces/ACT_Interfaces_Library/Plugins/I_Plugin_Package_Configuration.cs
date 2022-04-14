@@ -6,7 +6,9 @@
 //
 //    var actExamplePackageConfig = ActExamplePackageConfig.FromJson(jsonString);
 
-namespace ACT.Core.Types.PluginPackage
+using ACT.Core.Interfaces.Plugins;
+
+namespace ACT.Core.Interfaces.Plugins
 {
     public interface I_Plugin_Package_Configuration
     {
@@ -15,7 +17,7 @@ namespace ACT.Core.Types.PluginPackage
         string CertificationHash { get; set; }
         string IAuthorInfo { get; set; }
 
-        I_PluginPackage_Basic_Configuration PluginPackage_ConfigurationData { get; set; }                
+        I_Plugin_Package_Configuration PluginPackage_ConfigurationData { get; set; }                
         List<I_Plugin_Package_InterfaceTypes> Implemented_Interface_Types { get; set; }
                 
         Interfaces.Security.I_Author ProcessAuthorData();

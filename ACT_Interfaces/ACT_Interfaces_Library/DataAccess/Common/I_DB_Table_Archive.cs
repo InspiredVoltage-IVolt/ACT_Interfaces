@@ -19,10 +19,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// Interface I_DB_Table_Archive
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_DB_Table_Archive : I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_DB_Table_Archive :  Plugins.I_Plugin 
     {
         /// <summary>
         /// Generates the archive SQL.

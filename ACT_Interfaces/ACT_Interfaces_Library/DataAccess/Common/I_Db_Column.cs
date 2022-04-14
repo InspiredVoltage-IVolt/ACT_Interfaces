@@ -28,19 +28,24 @@ namespace ACT.Core.Interfaces.DataAccess
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
     /// <seealso cref="System.IComparable" />
-    public interface I_DbColumn : I_Core, IComparable
+    public interface I_Db_Column : IComparable
     {
+        /// <summary>
+        /// ACT Standard
+        /// </summary>
+        Guid ACT_Standard_ID { get; set; }
+
         /// <summary>
         /// Reference to the Parent Table
         /// </summary>
         /// <value>The parent table.</value>
-        I_DbTable ParentTable { get; set; }
+        I_Db_Table ParentTable { get; set; }
 
         /// <summary>
         /// Fully Qualified Name
         /// </summary>
         /// <value>The name.</value>
-        string Name { get; set; }
+        string FullyQualified_Name { get; set; }
 
         /// <summary>
         /// Short Name
@@ -53,6 +58,12 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <value>The type of the data.</value>
         System.Data.DbType DataType { get; set; }
+
+        /// <summary>
+        /// Custom Data Type Name Of Column
+        /// </summary>
+        /// <value>The type of the data.</value>
+        string CustomUser_DataType_Name { get; set; }
 
         /// <summary>
         /// Default Value i.e GetDate() or 1 or '1' etc..
@@ -100,25 +111,35 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Identity Increment
         /// </summary>
         /// <value>The identity increment.</value>
-        int IdentityIncrement { get; set; }
+        int IdentityIncrement_Step { get; set; }
 
         /// <summary>
         /// Identity Seed
         /// </summary>
         /// <value>The identity seed.</value>
-        int IdentitySeed { get; set; }
+        int Identity_Seed { get; set; }
 
         /// <summary>
         /// Is this Column a Primary Key
         /// </summary>
         /// <value><c>true</c> if this instance is primary key; otherwise, <c>false</c>.</value>
-        bool IsPrimaryKey { get; set; }
+        bool Is_PrimaryKey { get; set; }
 
         /// <summary>
         /// ColumnDescription
         /// </summary>
         /// <value>The description.</value>
         string Description { get; set; }
+
+        /// <summary>
+        /// The Date and Time this Column was Created
+        /// </summary>
+        DateTime DateCreated { get; set; }
+
+        /// <summary>
+        /// The Date and Time this Column was Last Modified
+        /// </summary>
+        DateTime LastModifiedDate { get; set; }
     }
     
 }

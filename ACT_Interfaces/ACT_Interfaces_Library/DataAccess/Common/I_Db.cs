@@ -4,7 +4,7 @@
 // Created          : 02-26-2019
 //
 // Last Modified By : MarkAlicz
-// Last Modified On : 02-26-2019
+// Last Modified On : 02-26-2022
 // ***********************************************************************
 // <copyright file="I_Db.cs" company="IVolt, LLC">
 //     Copyright ©  2019
@@ -18,10 +18,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// Defines the Structure of a Database
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_Db : I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_Db : Plugins.I_Plugin 
     {
         /// <summary>
         /// Gets or sets the data access class.
@@ -30,53 +30,64 @@ namespace ACT.Core.Interfaces.DataAccess
         I_DataAccess DataAccessClass { get; set; }
 
         /// <summary>
-        /// Gets or sets the name.
+        /// Gets or sets the Database name.
         /// </summary>
-        /// <value>The name.</value>
+        /// <value>The Database name.</value>
         string Name { get; set; }
 
         /// <summary>
-        /// Gets the table names.
+        /// List of the Schema Names
+        /// </summary>
+        List<string> SchemaNames { get; set; }
+
+        /// <summary>
+        /// Gets the table names. With Schema i.e. [dbo].TableName
         /// </summary>
         /// <value>The table names.</value>
-        List<string> TableNames { get; }
+        List<string> FullyQualified_TableNames { get; }
+
         /// <summary>
         /// Gets the stored procedure names.
         /// </summary>
-        /// <value>The stored procedure names.</value>
-        List<string> StoredProcedureNames { get; }
+        /// <value>The stored praaaaaaaaaaaocedure names.</value>
+        List<string> FullyQualified_StoredProcedureNames { get; }
         /// <summary>
         /// Gets the type names.
         /// </summary>
-        /// <value>The type names.</value>
-        List<string> TypeNames { get; }
+        /// <Fvalue>The type names.</value>
+        List<string> FullyQualified_TypeNames { get; }
         /// <summary>
         /// Gets the view names.
         /// </summary>
         /// <value>The view names.</value>
-        List<string> ViewNames { get; }
+        List<string> FullyQualified_ViewNames { get; }
 
         /// <summary>
         /// Gets or sets the tables.
         /// </summary>
         /// <value>The tables.</value>
-        BindingList<I_DbTable> Tables { get; set; }
+         BindingList<I_Db_Table> FullyQualified_Tables { get; set; }
 
         /// <summary>
         /// Gets or sets the types.
         /// </summary>
         /// <value>The types.</value>
-        List<I_DbDataType> Types { get; set; }
+        List<I_Db_DataType> UserTable_Types { get; set; }
+        /// <summary>
+        /// Gets or sets the types.
+        /// </summary>
+        /// <value>The types.</value>
+        List<I_Db_DataType> UserScalar_Types { get; set; }
         /// <summary>
         /// Gets or sets the views.
         /// </summary>
         /// <value>The views.</value>
-        List<I_DbView> Views { get; set; }
+        List<I_Db_View> FullyQualified_Views { get; set; }
         /// <summary>
         /// Gets or sets the stored procedures.
         /// </summary>
         /// <value>The stored procedures.</value>
-        List<I_DbStoredProcedure> StoredProcedures { get; set; }
+        List<I_Db_StoredProcedure> FullyQualified_StoredProcedures { get; set; }
 
         /// <summary>
         /// Gets the table.
@@ -84,13 +95,13 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Name">The name.</param>
         /// <param name="IgnoreCase">if set to <c>true</c> [ignore case].</param>
         /// <returns>I_DbTable.</returns>
-        I_DbTable GetTable(string Name, bool IgnoreCase);
+        I_Db_Table GetTable(string Name, bool IgnoreCase);
         /// <summary>
         /// Gets the table.
         /// </summary>
         /// <param name="Index">The index.</param>
         /// <returns>I_DbTable.</returns>
-        I_DbTable GetTable(int Index);
+        I_Db_Table GetTable(int Index);
 
         /// <summary>
         /// Gets the view.
@@ -98,13 +109,13 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Name">The name.</param>
         /// <param name="IgnoreCase">if set to <c>true</c> [ignore case].</param>
         /// <returns>I_DbView.</returns>
-        I_DbView GetView(string Name, bool IgnoreCase);
+        I_Db_View GetView(string Name, bool IgnoreCase);
         /// <summary>
         /// Gets the view.
         /// </summary>
         /// <param name="Index">The index.</param>
         /// <returns>I_DbView.</returns>
-        I_DbView GetView(int Index);
+        I_Db_View GetView(int Index);
 
         /// <summary>
         /// Gets the table count.
@@ -122,13 +133,13 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="Table">The table.</param>
         /// <returns>I_Result.</returns>
-        I_Result AddTable(I_DbTable Table);
+        I_Result AddTable(I_Db_Table Table);
         /// <summary>
         /// Adds the view.
         /// </summary>
         /// <param name="View">The view.</param>
         /// <returns>I_Result.</returns>
-        I_Result AddView(I_DbView View);
+        I_Result AddView(I_Db_View View);
 
         /// <summary>
         /// Removes the table.
@@ -150,14 +161,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Original">The original.</param>
         /// <param name="New">The new.</param>
         /// <returns>I_Result.</returns>
-        I_Result ModifyTable(I_DbTable Original, I_DbTable New);
+        I_Result ModifyTable(I_Db_Table Original, I_Db_Table New);
         /// <summary>
         /// Modifies the table.
         /// </summary>
         /// <param name="OriginalName">Name of the original.</param>
         /// <param name="New">The new.</param>
         /// <returns>I_Result.</returns>
-        I_Result ModifyTable(string OriginalName, I_DbTable New);
+        I_Result ModifyTable(string OriginalName, I_Db_Table New);
 
         /// <summary>
         /// Validate the Current Structure of the Database

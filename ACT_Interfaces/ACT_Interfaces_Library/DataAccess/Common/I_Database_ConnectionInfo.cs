@@ -16,10 +16,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// ConnectionInfo Represents a Database Connection To Any Database
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_Database_ConnectionInfo : Common.I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_Database_ConnectionInfo : Plugins.I_Plugin 
     {
         /// <summary>
         /// Gets or sets the type of the database.

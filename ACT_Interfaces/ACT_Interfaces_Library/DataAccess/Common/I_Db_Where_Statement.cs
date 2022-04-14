@@ -26,7 +26,7 @@ namespace ACT.Core.Interfaces.DataAccess
     /// Implements the <see cref="ACT.Core.Interfaces.I_Core" />
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.I_Core" />
-    public interface I_DbWhereStatement : I_Core
+    public interface I_Db_Where_Statement : I_Core
     {
         /// <summary>
         /// Adds the child.
@@ -36,7 +36,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Value">The value.</param>
         /// <param name="UseAndWithParent">if set to <c>true</c> [use and with parent].</param>
         /// <returns>I_DbWhereStatement.</returns>
-        I_DbWhereStatement AddChild(string ColumnName, System.Data.DbType DataType, object Value, bool UseAndWithParent);
+        I_Db_Where_Statement AddChild(string ColumnName, System.Data.DbType DataType, object Value, bool UseAndWithParent);
         /// <summary>
         /// Gets or sets a value indicating whether [use and].
         /// </summary>
@@ -51,7 +51,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the column.
         /// </summary>
         /// <value>The column.</value>
-        I_DbColumn Column { get; set; }
+        I_Db_Column Column { get; set; }
         /// <summary>
         /// Gets or sets the name of the column.
         /// </summary>
@@ -71,7 +71,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the children.
         /// </summary>
         /// <value>The children.</value>
-        List<I_DbWhereStatement> Children { get; set; }
+        List<I_Db_Where_Statement> Children { get; set; }
         /// <summary>
         /// Gets a value indicating whether this instance has children.
         /// </summary>
@@ -82,6 +82,6 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="FieldsAndValues">The fields and values.</param>
         /// <returns>I_DbWhereStatement.</returns>
-        I_DbWhereStatement GenerateFrom(Dictionary<I_DbColumn, object> FieldsAndValues);
+        I_Db_Where_Statement GenerateFrom(Dictionary<I_Db_Column, object> FieldsAndValues);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ACT.Core.Interfaces.Payment
 {
-    public interface I_PaymentGateway : I_Plugin
+    public interface I_PaymentGateway :  Plugins.I_Plugin 
     {
         bool WasSuccessfullAuthorize(Dictionary<string, string> Response);
         bool WasSuccessfullCapture(Dictionary<string, string> Response);

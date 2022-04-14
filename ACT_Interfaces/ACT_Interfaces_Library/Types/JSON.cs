@@ -15,7 +15,7 @@ namespace ACT.Core.Types
         private string _RawJSON = "";
         Dictionary<string, string> JSONData = new Dictionary<string, string>();
         List<object> JSONListData = new List<object>();
-        object JSONObjectData = null;
+       // object JSONObjectData = null;
 
 
         public string RawJSON { get { return _RawJSON; } }

@@ -9,10 +9,10 @@ namespace ACT.Core.Interfaces.DataAccess
 {
     /// <summary>
     /// Interface I_DbStoredProcedureParameter
-    /// Implements the <see cref="ACT.Core.Interfaces.Common.I_Plugin" />
+    /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
-    /// <seealso cref="ACT.Core.Interfaces.Common.I_Plugin" />
-    public interface I_DbFunctionParameter : I_Plugin
+    /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
+    public interface I_Db_Function_Parameter :  Plugins.I_Plugin 
     {
         /// <summary>
         /// Gets or sets the name.

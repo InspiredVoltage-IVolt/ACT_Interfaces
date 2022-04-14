@@ -1,11 +1,14 @@
-﻿using ACT.Core.Interfaces.Security;
+﻿using System.Collections;
 
-namespace ACT.Core.Interfaces.Common
+using ACT.Core.Interfaces.Security;
+
+namespace ACT.Core.Interfaces.Plugins
+
 {
     /// <summary>
     /// Defines a Plugin
     /// </summary>
-    public interface I_Plugin : I_Core
+    public interface I_Plugin  : I_Core
     {
         /// <summary>
         /// Author Information
@@ -13,34 +16,39 @@ namespace ACT.Core.Interfaces.Common
         I_Author Author { get; }
 
         /// <summary>
+        /// Author Chain
+        /// </summary>
+        List<Types.Security.I_Author_Json_Type> AuthorChain { get; }
+
+        /// <summary>
         /// Indicate if this is a ACT built in Plugin or Not
         /// </summary>
-        bool IsACTInternal { get; }
+        bool Is_ACTInternal { get; }
 
         /// <summary>
         /// DLLFileName
         /// </summary>
-        string DLLFileName { get; }
+        string DLL_FileName { get; }
 
         /// <summary>
         /// Used for when a Plugin Can Implement Different End Implementations
         /// </summary>
-        string SubIdentifier { get; }
+        string Sub_Identifier { get; }
 
         /// <summary>
         /// Types and Classes Implemented.  With Priority
         /// </summary>
-        Dictionary<Type, Dictionary<int, string>> TypesAndClassNames { get; }
+        Dictionary<Type, Dictionary<int, string>> Types_And_Class_Names { get; }
 
         /// <summary>
         /// Package Name to Download
         /// </summary>
-        string GitHubPackageName { get; }
+        string GitHub_PackageName { get; }
 
         /// <summary>
         /// Version of the Package To Retrieve
         /// </summary>
-        string GitHubPackageVersion { get; }
+        string GitHub_PackageVersion { get; }
 
         /// <summary>
         /// Sets the Impersonation of the Executing User Level
@@ -52,19 +60,19 @@ namespace ACT.Core.Interfaces.Common
         /// Returns all the System Settings Required By The Plugin
         /// </summary>
         /// <returns></returns>
-        List<string> ReturnSystemSettingRequirements(bool PerformReplacements = false);
+        ArrayList ReturnSystemSettingRequirements(bool PerformReplacements = false);
 
         /// <summary>
         /// Returns all the Files Required By The Plugin
         /// </summary>
         /// <returns></returns>
-        List<string> ReturnRequiredFiles(bool PerformReplacements = false);
+        ArrayList ReturnRequiredFiles(bool PerformReplacements = false);
 
         /// <summary>
         /// Validates the Configuration File is Setup Properly
         /// </summary>
         /// <returns></returns>
-        I_Result ValidatePluginRequirements();
+        Common.I_Result ValidatePluginRequirements();
     }
 
     public interface I_WebPlugin : I_Core

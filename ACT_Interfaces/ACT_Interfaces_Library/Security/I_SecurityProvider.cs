@@ -5,7 +5,7 @@ namespace ACT.Core.Interfaces.Security
     /// <summary>
     /// This interface defines the methods needed to Connect To A Security Provider.  Active Directory, Or Custom Base Auth
     /// </summary>
-    public interface I_SecurityProvider : I_Plugin
+    public interface I_SecurityProvider :  Plugins.I_Plugin 
     {
         /// <summary>
         /// A Unique Provider Identity Within The ACT Scope  Example: ActiveDirectory

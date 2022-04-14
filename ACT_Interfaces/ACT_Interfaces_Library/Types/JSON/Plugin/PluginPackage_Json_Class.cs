@@ -9,30 +9,20 @@ using System.Linq;
 namespace ACT.Core.Types.PluginPackage
 {
 
-    public class ACT_Plugin_Package_Definition
+    public class ACT_Plugin_Package_Definition_Json
     {
         [JsonIgnore()]
-        public I_Author_JSON_TYPE AuthorData
+        public I_Author_Json_Type AuthorData
         {
-            get
-            {
-                try
-                {
-                    return I_Author_JSON_TYPE.FromJson(System.Text.Encoding.Default.GetString(Convert.FromBase64String(IAuthorInfo)));
-                }
-                catch
-                {
-                    return null;
-                }
+            get {
+                try { return I_Author_Json_Type.FromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IAuthorInfo))); }
+                catch { return null; }
             }
-            set
-            {
-                try
-                {
-                    IAuthorInfo = Convert.ToBase64String(System.Text.Encoding.Default.GetBytes(value.ToJson()));
-                }
+            set {
+                try { IAuthorInfo = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value.ToJson())); }
                 catch (Exception ex)
                 {
+                    
                     throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex);
                 }
             }
@@ -56,7 +46,7 @@ namespace ACT.Core.Types.PluginPackage
         [JsonProperty("types", NullValueHandling = NullValueHandling.Ignore)]
         public List<Plugin_Type_Information> Included_Plugin_Type_Implementations { get; set; } = new List<Plugin_Type_Information>();
 
-        public static ACT_Plugin_Package_Definition FromJson(string json) => JsonConvert.DeserializeObject<ACT_Plugin_Package_Definition>(json, JSONHelper.Converter.Settings);
+        public static ACT_Plugin_Package_Definition_Json FromJson(string json) => JsonConvert.DeserializeObject<ACT_Plugin_Package_Definition_Json>(json, JSONHelper.Converter.Settings);
 
         public string ToJson() => JsonConvert.SerializeObject(this, JSONHelper.Converter.Settings);
     }
@@ -82,7 +72,7 @@ namespace ACT.Core.Types.PluginPackage
         public string EncryptionMethod { get; set; }
 
         [JsonProperty("additional-data", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Types.JSON.NameValue_Information> AdditionalData { get; set; } = new List<Types.JSON.NameValue_Information>();
+        public List<Types.JSON.KeyValue_Information_Simple_Json> AdditionalData { get; set; } = new List<Types.JSON.KeyValue_Information_Simple_Json>();
     }
 
     public class Plugin_Type_Information

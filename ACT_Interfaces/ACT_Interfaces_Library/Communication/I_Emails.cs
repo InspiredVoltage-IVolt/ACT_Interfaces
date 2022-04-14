@@ -2,7 +2,7 @@
 
 namespace ACT.Core.Interfaces.Communication
 {
-    public interface I_Emails : I_Plugin
+    public interface I_Emails :  Plugins.I_Plugin 
     {
         Guid StartBatch();
         bool SendBatch();

@@ -17,16 +17,16 @@ namespace ACT.Core.Types.Communication
         public string Method { get; set; }
 
         [JsonIgnore()]
-        public I_Author_JSON_TYPE Email_Phone_ContactInfo
+        public I_Author_Json_Type Email_Phone_ContactInfo
         {
             get
             {
-                try { return I_Author_JSON_TYPE.FromJson(System.Text.Encoding.Default.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_BASE64JSON))); }
+                try { return I_Author_Json_Type.FromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_BASE64JSON))); }
                 catch { return null; }
             }
             set
             {
-                try { IEmailPhoneContactInfo_BASE64JSON = Convert.ToBase64String(System.Text.Encoding.Default.GetBytes(value.ToJson())); }
+                try { IEmailPhoneContactInfo_BASE64JSON = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value.ToJson())); }
                 catch (Exception ex) { throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex); }
             }
         }
@@ -40,8 +40,8 @@ namespace ACT.Core.Types.Communication
         [JsonProperty("web-url", NullValueHandling = NullValueHandling.Ignore)]
         public string WEB_URL { get; set; }
 
-        [JsonProperty("web-variable-data", NullValueHandling = NullValueHandling.Ignore)]
-        public Types.JSON.NameValue_Information Web_Variable_Data { get; set; }
+        [JsonProperty("web-variable-key-value-data", NullValueHandling = NullValueHandling.Ignore)]
+        public JSON.KeyValue_Information_Simple_Json Web_Variable_Data { get; set; }
         
         [JsonProperty("network-file-location", NullValueHandling = NullValueHandling.Ignore)]
         public string NetworkFileLocation { get; set; }

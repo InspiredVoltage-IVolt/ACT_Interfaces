@@ -6,9 +6,11 @@
 //
 //    var actExamplePackageConfig = ActExamplePackageConfig.FromJson(jsonString);
 
-namespace ACT.Core.Types.PluginPackage
+using ACT.Core.Interfaces.Common;
+
+namespace ACT.Core.Interfaces.Plugins
 {
-    public interface I_Plugin_Package_InterfaceTypes
+    public interface I_Plugin_Package_InterfaceTypes : Plugins.I_Plugin
     {
         string IAuthorInfo { get; set; }
         Interfaces.Security.I_Author ProcessAuthorData();

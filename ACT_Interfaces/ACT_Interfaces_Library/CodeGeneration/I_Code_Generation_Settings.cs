@@ -108,7 +108,7 @@
 
         /// <summary>
         /// JSON string 
-        /// <seealso cref="ACT.Core.Types.PluginPackage.ACT_Plugin_Package_Definition"/>
+        /// <seealso cref="ACT.Core.Types.PluginPackage.ACT_Plugin_Package_Definition_Json"/>
         /// </summary>
         string Web_Service_Plugin_Generator { get; set; }
 
@@ -234,7 +234,7 @@
         string APIKeyIfNew { get; set; }
         string PackageName { get; set; }
         string Version { get; set; }
-        Types.JSON.NameValue_Information PackageInformation { get; set; }
+        Types.JSON.KeyValue_Information_Simple_Json PackageInformation { get; set; }
 
         #endregion
     }

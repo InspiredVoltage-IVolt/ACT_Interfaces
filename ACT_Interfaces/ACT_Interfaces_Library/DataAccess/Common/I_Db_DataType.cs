@@ -21,7 +21,7 @@ namespace ACT.Core.Interfaces.DataAccess
     /// <summary>
     /// Interface I_DbDataType
     /// </summary>
-    public interface I_DbDataType
+    public interface I_Db_DataType
     {
         /// <summary>
         /// Gets or sets the system type identifier.

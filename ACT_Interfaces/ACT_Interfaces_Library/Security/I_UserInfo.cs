@@ -1,4 +1,8 @@
-﻿namespace ACT.Core.Interfaces.Security
+﻿using ACT.Core.Interfaces.Data.JSON_Contracts;
+
+    
+    
+    namespace ACT.Core.Interfaces.Security
 {
     /// <summary>
     /// Defines a common USER Information Structure
@@ -81,25 +85,25 @@
         /// <summary> List Of All The Users Groups</summary>
         List<string> GetGroups();
 
-        void AddAddress(I_UserAddress NewAddress);
-        void UpdateAddress(I_UserAddress AddressToUpdate);
-        void DeleteAddress(I_UserAddress AddressToDelete);
+        void AddAddress(I_User_Address NewAddress);
+        void UpdateAddress(I_User_Address AddressToUpdate);
+        void DeleteAddress(I_User_Address AddressToDelete);
 
-        I_UserAddress GetAddressByID(Guid ID);
-        I_UserAddress GetAddressByName(string Name);
-        List<I_UserAddress> GetAddresses();
-        I_UserAddress GetPrimaryBillingAddress();
-        I_UserAddress GetPrimaryShippingAddress();
-        I_UserAddress GetPrimaryContactAddress();
+        I_User_Address GetAddressByID(Guid ID);
+        I_User_Address GetAddressByName(string Name);
+        List<I_User_Address> GetAddresses();
+        I_User_Address GetPrimaryBillingAddress();
+        I_User_Address GetPrimaryShippingAddress();
+        I_User_Address GetPrimaryContactAddress();
 
 
-        List<I_UserContact> GetUserContacts();
-        I_UserContact GetContact(Guid ID);
-        List<I_UserContact> Search(string SearchString);
+        List<I_Contact_Information> GetUserContacts();
+        I_Contact_Information GetContact(Guid ID);
+        List<I_Contact_Information> Search(string SearchString);
 
-        void UpdateContact(I_UserContact ContactToUpdate);
-        void AddContact(I_UserContact ContactToAdd);
-        void DeleteContact(I_UserContact ContactToDelete);
+        void UpdateContact(I_Contact_Information ContactToUpdate);
+        void AddContact(I_Contact_Information ContactToAdd);
+        void DeleteContact(I_Contact_Information ContactToDelete);
 
 
         #endregion Operations 

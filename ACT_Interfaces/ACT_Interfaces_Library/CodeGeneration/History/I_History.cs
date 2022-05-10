@@ -4,10 +4,10 @@
 // Created          : 02-26-2019
 //
 // Last Modified By : MarkAlicz
-// Last Modified On : 02-26-2019
+// Last Modified On : 04-13-2022
 // ***********************************************************************
 // <copyright file="I_History.cs" company="IVolt, LLC">
-//     Copyright ©  2019
+//     Copyright ©  2022
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
@@ -26,7 +26,7 @@ namespace ACT.Core.Interfaces.CodeGeneration.History
         /// <param name="User">The user.</param>
         /// <param name="Type">The type.</param>
         /// <param name="StoragePath">The storage path.</param>
-        void Create(I_UserInfo User, ACT.Core.Enums.IO.Serialization_Type Type, string StoragePath);
+        void Create(I_UserInfo User, Enums.IO.Serialization_Type Type, string StoragePath);
 
         /// <summary>
         /// Gets a value indicating whether this instance is loaded.

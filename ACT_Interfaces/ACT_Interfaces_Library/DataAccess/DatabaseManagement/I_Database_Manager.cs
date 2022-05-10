@@ -12,10 +12,29 @@ namespace ACT.Core.Interfaces.DataAccess.DatabaseManagement
     public interface I_Database_Manager : Interfaces.Plugins.I_Plugin 
     {
         /// <summary>
+        /// Returns the list of supported database engines
+        /// </summary>
+        List<Enums.Database.Database_Engine> SupportedDatabaseEngines { get; }
+
+        /// <summary>
         /// Holds the BASE Data Access Object
         /// Implementation is All You
         /// </summary>
         I_DataAccess DataAccessObject { get; }
+
+        /// <summary>
+        /// Create Database
+        /// </summary>
+        /// <param name="DatabaseClasses"></param>
+        /// <returns></returns>
+        Common.I_ResultExpanded CreateDatabase(List<object> SourceClasses);
+
+        /// <summary>
+        /// Create Database
+        /// </summary>
+        /// <param name="DatabaseClasses"></param>
+        /// <returns></returns>
+        Common.I_ResultExpanded CreateTable(object SourceClass);
 
         /// <summary>
         /// Create a Table
@@ -43,7 +62,14 @@ namespace ACT.Core.Interfaces.DataAccess.DatabaseManagement
         /// </summary>
         /// <param name="functionDefinition"></param>
         /// <returns>Test Result Expanded</returns>
-        Common.I_ResultExpanded CreateFunction(I_Db_StoredProcedure functionDefinition);
+        Common.I_ResultExpanded CreateFunction(I_Db_Function functionDefinition);
+
+        /// <summary>
+        /// Create a Function
+        /// </summary>
+        /// <param name="functionDefinition"></param>
+        /// <returns>Test Result Expanded</returns>
+        Common.I_ResultExpanded CreateCustomDBType(I_Db_DataType userDefinedDataType);
 
 
     }

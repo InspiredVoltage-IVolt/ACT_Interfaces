@@ -4,10 +4,10 @@
 // Created          : 02-26-2019
 //
 // Last Modified By : MarkAlicz
-// Last Modified On : 02-26-2019
+// Last Modified On : 04-13-2022
 // ***********************************************************************
 // <copyright file="I_Excel_Sheet.cs" company="IVolt, LLC">
-//     Copyright ©  2019
+//     Copyright ©  2022
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
@@ -55,7 +55,7 @@ namespace ACT.Core.Interfaces.DataAccess.Excel
         /// </summary>
         /// <param name="d">The d.</param>
         /// <returns>ACT.Core.Interfaces.Common.I_Result.</returns>
-        ACT.Core.Interfaces.Common.I_Result Import(System.Data.DataTable d);
+        Common.I_Result Import(System.Data.DataTable d);
 
         /// <summary>
         /// Exports to json.

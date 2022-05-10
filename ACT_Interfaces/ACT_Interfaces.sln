@@ -5,12 +5,11 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACT_Interfaces_Library", "ACT_Interfaces_Library\ACT_Interfaces_Library.csproj", "{46139467-1785-42F3-A25E-03EF180405A3}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ACT_Interfaces_Shared_Project", "ACT_Interfaces_Shared_Project\ACT_Interfaces_Shared_Project.shproj", "{ABA65699-6406-4D4C-AA5E-0990B3CC4D0B}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Resources", "..\..\_Resources_Shared\Resources\Resources\Resources.shproj", "{48C2C9AB-5274-4BE2-BA97-3C3C81B271BA}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		ACT_Interfaces_Shared_Project\ACT_Interfaces_Shared_Project.projitems*{46139467-1785-42f3-a25e-03ef180405a3}*SharedItemsImports = 5
-		ACT_Interfaces_Shared_Project\ACT_Interfaces_Shared_Project.projitems*{aba65699-6406-4d4c-aa5e-0990b3cc4d0b}*SharedItemsImports = 13
+		..\..\_Resources_Shared\Resources\Resources\Resources.projitems*{48c2c9ab-5274-4be2-ba97-3c3c81b271ba}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

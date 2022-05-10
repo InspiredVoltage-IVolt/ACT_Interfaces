@@ -6,7 +6,7 @@
         /// Save using Internal Settings
         /// </summary>
         /// <returns>Common.I_Result.</returns>
-        ACT.Core.Interfaces.Common.I_Result Save();
+        Common.I_Result Save();
 
         /// <summary>
         /// Save Using Specified Location / FileName

@@ -69,12 +69,12 @@
         /// Gets or sets the output language.
         /// </summary>
         /// <value>The output language.</value>
-        ACT.Core.Enums.Programming.Programming_Language OutputLanguage { get; set; }
+        Enums.Programming.Programming_Language OutputLanguage { get; set; }
 
         /// <summary>
         /// Sets the Dot Net Version If Needed
         /// </summary>
-        ACT.Core.Enums.Programming.DOTNET_VERSIONS DotNet_TargetVersion { get; set; }
+       Enums.Programming.DOTNET_VERSIONS DotNet_TargetVersion { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [compile code].
@@ -234,7 +234,7 @@
         string APIKeyIfNew { get; set; }
         string PackageName { get; set; }
         string Version { get; set; }
-        Types.JSON.KeyValue_Information_Simple_Json PackageInformation { get; set; }
+        Data.I_NameValue_Data PackageInformation { get; set; }
 
         #endregion
     }

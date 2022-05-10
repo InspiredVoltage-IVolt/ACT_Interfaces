@@ -19,8 +19,8 @@ namespace ACT.Core.Interfaces.Plugins
 
         I_Plugin_Package_Configuration PluginPackage_ConfigurationData { get; set; }                
         List<I_Plugin_Package_InterfaceTypes> Implemented_Interface_Types { get; set; }
-                
-        Interfaces.Security.I_Author ProcessAuthorData();
+
+        Data.JSON_Contracts.I_Author ProcessAuthorData();
         List<Type> GetAllImplementedTypes();
     }
 }

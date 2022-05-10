@@ -13,12 +13,12 @@ namespace ACT.Core.Interfaces.Plugins
         /// <summary>
         /// Author Information
         /// </summary>
-        I_Author Author { get; }
+        Data.JSON_Contracts.I_Author Author { get; }
 
         /// <summary>
         /// Author Chain
         /// </summary>
-        List<Types.Security.I_Author_Json_Type> AuthorChain { get; }
+        List<Data.JSON_Contracts.I_Author> AuthorChain { get; }
 
         /// <summary>
         /// Indicate if this is a ACT built in Plugin or Not

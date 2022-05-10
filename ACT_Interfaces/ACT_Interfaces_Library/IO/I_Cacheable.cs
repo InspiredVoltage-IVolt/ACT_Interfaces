@@ -37,6 +37,6 @@
         /// Retrieve the object from cache if it exists
         /// </summary>
         /// <returns>object in cache</returns>
-        object Retrieve();
+        object Retrieve(string HashID);
     }
 }

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ACT.Core.Interfaces.Data.JSON_Contracts;
 namespace ACT.Core.Interfaces.Managers
 {
-    public interface I_UserManagementSystem : ACT.Core.Interfaces.Security.I_SecurityProvider
+    public interface I_UserManagementSystem :Security.I_SecurityProvider
     {
 
-        Security.I_UserAddress GetUserPrimaryShippingAddress(string user_id);
-        Security.I_UserAddress GetUserPrimaryBillingAddress(string user_id);
+        I_User_Address GetUserPrimaryShippingAddress(string user_id);
+        I_User_Address GetUserPrimaryBillingAddress(string user_id);
 
 
 

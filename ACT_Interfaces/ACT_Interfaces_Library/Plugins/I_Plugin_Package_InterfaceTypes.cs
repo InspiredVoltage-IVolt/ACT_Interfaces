@@ -13,7 +13,7 @@ namespace ACT.Core.Interfaces.Plugins
     public interface I_Plugin_Package_InterfaceTypes : Plugins.I_Plugin
     {
         string IAuthorInfo { get; set; }
-        Interfaces.Security.I_Author ProcessAuthorData();
+        Data.JSON_Contracts.I_Author ProcessAuthorData();
 
         string DllFileName { get; set; }
         string FullClassName { get; set; }
@@ -29,6 +29,6 @@ namespace ACT.Core.Interfaces.Plugins
 
         Type GetTypeInformation();
 
-        List<Interfaces.Common.I_CustomNameValueData> AdditionalData { get; set; }
+        List<Data.I_NameValue_Data> AdditionalData { get; set; }
     }
 }

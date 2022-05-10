@@ -16,7 +16,7 @@
     <repository type="git" url="https://github.com/InspiredVoltage-IVolt/ACT_Interfaces" />
     <dependencies>
       <group targetFramework="net6.0">
-        <dependency id="ACT_Enums" version="2.1.2" exclude="Build,Analyzers" />
+        <dependency id="ACT_Enums" version="2.1.3" exclude="Build,Analyzers" />
         <dependency id="NLog" version="4.7.15" exclude="Build,Analyzers" />
         <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
         <dependency id="System.Data.SqlClient" version="4.8.3" exclude="Build,Analyzers" />

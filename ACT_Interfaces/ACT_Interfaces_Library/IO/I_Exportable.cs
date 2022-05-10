@@ -18,7 +18,25 @@ namespace ACT.Core.Interfaces.IO
         /// Import the Defined Object Type Into this Obejct
         /// </summary>
         /// <param name="item">The item.</param>
-        void Import(T item);
+        T Import(T item);
+
+        /// <summary>Export To JSON</summary>
+        /// <returns>JSON String</returns>
+        string ExportToJson();
+
+        /// <summary>Import From JSON</summary>
+        /// <returns>ClassS</returns>
+        T ImportDataFromJson(string JSONString);
+
+        /// <summary>Export To Custom</summary>
+        /// <returns>String</returns>
+        string CustomExport(string Identifier, string JSONString);
+
+        /// <summary>Import From Custom</summary>
+        /// <returns>Populated Class</returns>
+        T CustomImport(string Identifier, string JSONString);
+
+
     }
 }
 

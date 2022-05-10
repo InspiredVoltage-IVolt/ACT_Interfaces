@@ -9,27 +9,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Types.JSON
 {
-    /// <summary>
-    /// Common Name Value Class
-    /// </summary>
-    public class NameValue_Information_Advanced_Json
-    {
-        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
-        public string Name { get; set; }
-
-        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
-        public string Value { get; set; }
-
-        /// <summary>
-        /// Base64 Encoded
-        /// </summary>
-        [JsonProperty("additional-information-value", NullValueHandling = NullValueHandling.Ignore)]
-        public string AdditionalInformation { get; set; }
-
-        public static NameValue_Information_Advanced_Json FromJson(string json) => JsonConvert.DeserializeObject<NameValue_Information_Advanced_Json>(json, JSONHelper.Converter.Settings);
-
-        public string ToJson() => JsonConvert.SerializeObject(this, JSONHelper.Converter.Settings);
-    }
+ 
 
     /// <summary>
     /// Simple Key Value Class

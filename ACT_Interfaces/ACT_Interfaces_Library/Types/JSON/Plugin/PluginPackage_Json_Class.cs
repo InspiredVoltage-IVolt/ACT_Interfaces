@@ -1,32 +1,32 @@
-﻿using ACT.Core.Types.Security;
+﻿
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-
+using ACT.Core.Interfaces.Data.JSON_Contracts;
 
 namespace ACT.Core.Types.PluginPackage
 {
 
     public class ACT_Plugin_Package_Definition_Json
     {
-        [JsonIgnore()]
-        public I_Author_Json_Type AuthorData
-        {
-            get {
-                try { return I_Author_Json_Type.FromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IAuthorInfo))); }
-                catch { return null; }
-            }
-            set {
-                try { IAuthorInfo = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value.ToJson())); }
-                catch (Exception ex)
-                {
+        //[JsonIgnore()]
+        //public I_Author AuthorData
+        //{
+        //    get {
+        //        try { return I_Author.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IAuthorInfo))); }
+        //        catch { return null; }
+        //    }
+        //    set {
+        //        try { IAuthorInfo = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value.ToJson())); }
+        //        catch (Exception ex)
+        //        {
                     
-                    throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex);
-                }
-            }
-        }
+        //            throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex);
+        //        }
+        //    }
+        //}
 
         [JsonProperty("i-author-info", NullValueHandling = NullValueHandling.Ignore)]
         public string IAuthorInfo { get; set; }

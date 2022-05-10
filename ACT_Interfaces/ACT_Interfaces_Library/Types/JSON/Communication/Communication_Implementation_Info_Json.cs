@@ -1,10 +1,10 @@
-﻿using ACT.Core.Types.Security;
+﻿
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-
+using ACT.Core.Interfaces.Data.JSON_Contracts;
 
 namespace ACT.Core.Types.Communication
 {
@@ -13,20 +13,22 @@ namespace ACT.Core.Types.Communication
     /// </summary>
     public class Communication_Implementation_Info_JSON
     {
+        I_Author _Email_Phone_ContactInfo = null;
+
         [JsonProperty("method", NullValueHandling = NullValueHandling.Ignore)]
         public string Method { get; set; }
 
         [JsonIgnore()]
-        public I_Author_Json_Type Email_Phone_ContactInfo
+        public I_Author Email_Phone_ContactInfo
         {
             get
             {
-                try { return I_Author_Json_Type.FromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_BASE64JSON))); }
+                try { return _Email_Phone_ContactInfo.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_BASE64JSON))); }
                 catch { return null; }
             }
             set
             {
-                try { IEmailPhoneContactInfo_BASE64JSON = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(value.ToJson())); }
+                try { IEmailPhoneContactInfo_BASE64JSON = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(_Email_Phone_ContactInfo.ExportToJson())); }
                 catch (Exception ex) { throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex); }
             }
         }

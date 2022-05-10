@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Managers
 {
+    /// <summary>
+    /// Message Que Manager
+    /// </summary>
     public interface I_MessageQueManager
     {
         ArrayList Messages { get; set; }
@@ -17,8 +20,7 @@ namespace ACT.Core.Interfaces.Managers
         string  PUSHTOTOP(string message, int Importance);
         string  PUSHTOBOTTOM(string message, int Importance);
         
-
-        Func<string,bool,string> ExternalProcessor(string Message, bool BasedOnImportance);
+        SortedDictionary<Guid, Func<string, int, bool>> ProcessorPlugins { get; set; }
 
         string Json_Encoding_Type { get; set; }
 

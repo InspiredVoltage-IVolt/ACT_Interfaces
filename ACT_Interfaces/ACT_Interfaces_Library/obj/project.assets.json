@@ -681,13 +681,13 @@
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "2.1.7",
+    "version": "2.1.8",
     "restore": {
-      "projectUniqueName": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
+      "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",
-      "projectPath": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
+      "projectPath": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "packagesPath": "C:\\Users\\MarkAlicz\\.nuget\\packages\\",
-      "outputPath": "D:\\IVolt_Development\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\obj\\",
+      "outputPath": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MarkAlicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -756,7 +756,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

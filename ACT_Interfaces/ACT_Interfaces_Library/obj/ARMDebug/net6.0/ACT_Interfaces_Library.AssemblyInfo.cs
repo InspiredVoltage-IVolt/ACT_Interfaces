@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("IVolt, Mark Alicz, Darkbit")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("ARMDebug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2020-2021 IVolt, LLC")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Full List of Interfaces")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.8")]

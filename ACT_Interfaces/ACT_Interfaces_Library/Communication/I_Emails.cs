@@ -6,11 +6,11 @@ namespace ACT.Core.Interfaces.Communication
     {
         Guid StartBatch();
         bool SendBatch();
-        I_Result SendEmail(List<string> To, List<string> CC, List<string> BCC, string ReplyTo, string Subject, string Body);
+        I_Result SendEmail(List<string> To, List<string> cc, List<string> bcc, string ReplyTo, string Subject, string Body);
 
-        I_Result SendEmail(string To, string CC, string BCC, string ReplyTo, string Subject, string Body);
+        I_Result SendEmail(string To, string cc, string bcc, string ReplyTo, string Subject, string Body);
 
-        I_Result SendEmail(string To, string CC, string BCC, string ReplyTo, string Subject, string Body, string FileName);
+        I_Result SendEmail(string To, string cc, string bcc, string ReplyTo, string Subject, string Body, string FileName);
 
 
 

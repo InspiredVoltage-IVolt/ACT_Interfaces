@@ -41,7 +41,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets a value indicating whether [use and].
         /// </summary>
         /// <value><c>true</c> if [use and]; otherwise, <c>false</c>.</value>
-        bool UseAND { get; set; }
+        bool UseAnd { get; set; }
         /// <summary>
         /// Gets or sets the statement operators.
         /// </summary>

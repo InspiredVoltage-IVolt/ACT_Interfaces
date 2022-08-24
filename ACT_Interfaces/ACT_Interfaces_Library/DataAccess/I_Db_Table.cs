@@ -201,26 +201,26 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="Fields">The fields.</param>
         /// <returns>System.String.</returns>
-        string GetInsertDataSQL(List<string> Fields);
+        string GetInsertDataSql(List<string> Fields);
         /// <summary>
         /// Gets the update data SQL.
         /// </summary>
         /// <param name="Fields">The fields.</param>
         /// <param name="Where">The where.</param>
         /// <returns>System.String.</returns>
-        string GetUpdateDataSQL(List<string> Fields,I_Db_Where_Statement Where);
+        string GetUpdateDataSql(List<string> Fields,I_Db_Where_Statement Where);
         /// <summary>
         /// Gets the update data SQL.
         /// </summary>
         /// <param name="Fields">The fields.</param>
         /// <returns>System.String.</returns>
-        string GetUpdateDataSQL(List<string> Fields);
+        string GetUpdateDataSql(List<string> Fields);
         /// <summary>
         /// Gets the delete data SQL.
         /// </summary>
         /// <param name="Where">The where.</param>
         /// <returns>System.String.</returns>
-        string GetDeleteDataSQL(I_Db_Where_Statement Where);
+        string GetDeleteDataSql(I_Db_Where_Statement Where);
 
         /// <summary>
         /// Gets or sets the age in days.

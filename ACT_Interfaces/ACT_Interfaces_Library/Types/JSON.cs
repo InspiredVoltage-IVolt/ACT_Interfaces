@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Types
 {
-    public class JSONObject
+    public class JsonObject
     {
         public enum DeserializeReturnTypes { Dictionary, List, Other }
 
-        private string _RawJSON = "";
-        Dictionary<string, string> JSONData = new Dictionary<string, string>();
-        List<object> JSONListData = new List<object>();
+        private string _rawJson = "";
+        Dictionary<string, string> _jsonData = new Dictionary<string, string>();
+        List<object> _jsonListData = new List<object>();
        // object JSONObjectData = null;
 
 
-        public string RawJSON { get { return _RawJSON; } }
-        public DeserializeReturnTypes? CurrentProcessedJSONDataType = null;
+        public string RawJson { get { return _rawJson; } }
+        public DeserializeReturnTypes? CurrentProcessedJsonDataType = null;
 
 
 
-        public void ParseJSON(string Path, bool UseJConvertMethod = true)
+        public void ParseJson(string Path, bool UseJConvertMethod = true)
         {
 
             if (!System.IO.File.Exists(Path))
@@ -32,34 +32,34 @@ namespace ACT.Core.Types
                 return;
             }
 
-            _RawJSON = System.IO.File.ReadAllText(Path);
+            _rawJson = System.IO.File.ReadAllText(Path);
 
-            if (_RawJSON == null || _RawJSON == "")
+            if (_rawJson == null || _rawJson == "")
             {
                 // TODO LOG ERROR
                 return;
             }
 
 
-            if (UseJConvertMethod) { var o = JsonConvert.DeserializeObject<IDictionary<string, string>>(RawJSON, new DictionaryConverter()); }
+            if (UseJConvertMethod) { var O = JsonConvert.DeserializeObject<IDictionary<string, string>>(RawJson, new DictionaryConverter()); }
             else
             {
 
-                var jsonData = Deserialize(RawJSON);
+                var JsonData = Deserialize(RawJson);
 
-                if (jsonData.GetType() == typeof(Dictionary<string, string>))
+                if (JsonData.GetType() == typeof(Dictionary<string, string>))
                 {
-                    CurrentProcessedJSONDataType = DeserializeReturnTypes.Dictionary;
+                    CurrentProcessedJsonDataType = DeserializeReturnTypes.Dictionary;
                     return;
                 }
-                else if (jsonData.GetType() == typeof(List<string>))
+                else if (JsonData.GetType() == typeof(List<string>))
                 {
-                    CurrentProcessedJSONDataType = DeserializeReturnTypes.List;
+                    CurrentProcessedJsonDataType = DeserializeReturnTypes.List;
                     return;
                 }
                 else
                 {
-                    CurrentProcessedJSONDataType = DeserializeReturnTypes.Other;
+                    CurrentProcessedJsonDataType = DeserializeReturnTypes.Other;
                     return;
                 }
             }
@@ -91,8 +91,8 @@ namespace ACT.Core.Types
         {
             if (base64 == null) { return false; }
 
-            Span<byte> buffer = new Span<byte>(new byte[base64.Length]);
-            return Convert.TryFromBase64String(base64, buffer, out int bytesParsed);
+            Span<byte> Buffer = new Span<byte>(new byte[base64.Length]);
+            return Convert.TryFromBase64String(base64, Buffer, out int BytesParsed);
         }
     }
 
@@ -103,8 +103,8 @@ namespace ACT.Core.Types
 
         private void WriteValue(JsonWriter writer, object value)
         {
-            var t = JToken.FromObject(value);
-            switch (t.Type)
+            var T = JToken.FromObject(value);
+            switch (T.Type)
             {
                 case JTokenType.Object:
                     this.WriteObject(writer, value.ToString());
@@ -121,11 +121,11 @@ namespace ACT.Core.Types
         private void WriteObject(JsonWriter writer, object value)
         {
             writer.WriteStartObject();
-            var obj = value as IDictionary<string, string>;
-            foreach (var kvp in obj)
+            var Obj = value as IDictionary<string, string>;
+            foreach (var Kvp in Obj)
             {
-                writer.WritePropertyName(kvp.Key);
-                this.WriteValue(writer, kvp.Value.ToString());
+                writer.WritePropertyName(Kvp.Key);
+                this.WriteValue(writer, Kvp.Value.ToString());
             }
             writer.WriteEndObject();
         }
@@ -133,10 +133,10 @@ namespace ACT.Core.Types
         private void WriteArray(JsonWriter writer, object value)
         {
             writer.WriteStartArray();
-            var array = value as IEnumerable<string>;
-            foreach (var o in array)
+            var Array = value as IEnumerable<string>;
+            foreach (var O in Array)
             {
-                this.WriteValue(writer, o);
+                this.WriteValue(writer, O);
             }
             writer.WriteEndArray();
         }
@@ -179,7 +179,7 @@ namespace ACT.Core.Types
 
         private object ReadArray(JsonReader reader)
         {
-            IList<string> list = new List<string>();
+            IList<string> List = new List<string>();
 
             while (reader.Read())
             {
@@ -188,12 +188,12 @@ namespace ACT.Core.Types
                     case JsonToken.Comment:
                         break;
                     default:
-                        var v = ReadValue(reader);
+                        var V = ReadValue(reader);
 
-                        list.Add(v.ToString());
+                        List.Add(V.ToString());
                         break;
                     case JsonToken.EndArray:
-                        return list;
+                        return List;
                 }
             }
 
@@ -202,28 +202,28 @@ namespace ACT.Core.Types
 
         private object ReadObject(JsonReader reader)
         {
-            var obj = new Dictionary<string, string>();
+            var Obj = new Dictionary<string, string>();
 
             while (reader.Read())
             {
                 switch (reader.TokenType)
                 {
                     case JsonToken.PropertyName:
-                        var propertyName = reader.Value.ToString();
+                        var PropertyName = reader.Value.ToString();
 
                         if (!reader.Read())
                         {
                             throw new JsonSerializationException("Unexpected end when reading IDictionary<string, string>");
                         }
 
-                        var v = ReadValue(reader);
+                        var V = ReadValue(reader);
 
-                        obj[propertyName] = v.ToString();
+                        Obj[PropertyName] = V.ToString();
                         break;
                     case JsonToken.Comment:
                         break;
                     case JsonToken.EndObject:
-                        return obj;
+                        return Obj;
                 }
             }
 

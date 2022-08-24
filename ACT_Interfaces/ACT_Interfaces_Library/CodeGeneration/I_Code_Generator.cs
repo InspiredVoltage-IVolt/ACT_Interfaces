@@ -33,7 +33,7 @@
         /// </summary>
         /// <param name="CodeSettings">The code settings.</param>
         /// <returns>List&lt;I_GeneratedCode&gt;.</returns>
-        List<I_Generated_Code> GenerateCode(I_MSSQL_CodeGeneration_Settings CodeSettings);
+        List<I_Generated_Code> GenerateCode(I_Mssql_CodeGeneration_Settings CodeSettings);
 
         /// <summary>
         /// Generate Code

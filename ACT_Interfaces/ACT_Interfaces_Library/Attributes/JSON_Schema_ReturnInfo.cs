@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 namespace ACT.Core.Interfaces.Attributes
 {
     [System.AttributeUsage(System.AttributeTargets.All, Inherited = false, AllowMultiple = true)]
-    public class JSON_Schema_ReturnInfo : Attribute
+    public class Json_Schema_ReturnInfo : Attribute
     {
-        private string _JSON_Schema_Identifier_DLL = "";
-        private string _JSON_Schema_Identifier_FullClassName = "";
-        private string _JSON_Schema_Example_Blank = "{\"Common\"}";
-        private string _JSON_Schema_Identifier = "CommonNameValue";
-        private int _NamedInt;
+        private string _jsonSchemaIdentifierDll = "";
+        private string _jsonSchemaIdentifierFullClassName = "";
+        private string _jsonSchemaExampleBlank = "{\"Common\"}";
+        private string _jsonSchemaIdentifier;
+        private int _namedInt;
 
         /// <summary>
         /// This is a JSON Schema Definitions
         /// </summary>
-        /// <param name="JSON_Schema_Identifier"></param>
-        public JSON_Schema_ReturnInfo(string JSON_Schema_Identifier, string ImplementationPluginJSONIdentifier = "")
+        /// <param name="jsonSchemaIdentifier"></param>
+        public Json_Schema_ReturnInfo(string jsonSchemaIdentifier, string implementationPluginJsonIdentifier = "")
         {
            // I_PluginDefinition _PluginParser = ACT.
-            this._JSON_Schema_Identifier = JSON_Schema_Identifier;
+            this._jsonSchemaIdentifier = jsonSchemaIdentifier;
           //  this._JSON_Schema_Identifier_DLL = DLLName;
           //  this._JSON_Schema_Identifier_FullClassName = FullClassName;
 
@@ -32,19 +32,16 @@ namespace ACT.Core.Interfaces.Attributes
         /// <summary>
         /// JSON Schema Identifier
         /// </summary>
-        public string JSON_Schema_Identifier
-        {
-            get { return _JSON_Schema_Identifier; }
-        }
+        public string Json_Schema_Identifier => _jsonSchemaIdentifier ?? "CommonNameValue";
 
         /// <summary>
         /// JSON Schema Identifier
         /// </summary>
-        public int NamedInt { get { return _NamedInt; } }
+        public int NamedInt => _namedInt;
 
-        public string JSON_Schema_Identifier_DLL { get => _JSON_Schema_Identifier_DLL; }
-        public string JSON_Schema_Identifier_FullClassName { get => _JSON_Schema_Identifier_FullClassName; }
-        public string JSON_Schema_Example_Blank { get => _JSON_Schema_Example_Blank; }
+        public string Json_Schema_Identifier_Dll => _jsonSchemaIdentifierDll;
+        public string Json_Schema_Identifier_FullClassName => _jsonSchemaIdentifierFullClassName;
+        public string Json_Schema_Example_Blank => _jsonSchemaExampleBlank;
 
         /// <summary>
         /// Process the Positional String

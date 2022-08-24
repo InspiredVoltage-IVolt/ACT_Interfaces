@@ -22,7 +22,7 @@ namespace ACT.Core.Interfaces.AI
     /// <summary>
     /// Component Result
     /// </summary>
-    public interface I_ML_ComponentResult
+    public interface I_Ml_ComponentResult
     {
     }
 }

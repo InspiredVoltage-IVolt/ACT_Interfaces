@@ -8,8 +8,8 @@ namespace ACT.Core.Interfaces.ACT
 {
     public interface I_Identifier: Plugins.I_Plugin
     {
-        string ACT_ID { get; set; }
-        string External_ID { get; set; }
+        string Id { get; set; }
+        string External_Id { get; set; }
         string SourceEngine { get; set; }
     }
 }

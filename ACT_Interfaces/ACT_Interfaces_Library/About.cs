@@ -4,8 +4,8 @@
     {
         public static string AboutMe()
         {
-            string _tmpReturn = "{\"depends on\":\"\"}";
-            return _tmpReturn;
+            string TmpReturn = "{\"depends on\":\"\"}";
+            return TmpReturn;
         }
     }
 }

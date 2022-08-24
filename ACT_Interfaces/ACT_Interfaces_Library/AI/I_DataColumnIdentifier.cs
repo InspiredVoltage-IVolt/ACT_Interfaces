@@ -40,7 +40,7 @@ namespace ACT.Core.Interfaces.AI
         /// Unique System Identifier
         /// </summary>
         /// <value>The identifier.</value>
-        Guid ID { get; }
+        Guid Id { get; }
 
         /// <summary>
         /// System Identifier

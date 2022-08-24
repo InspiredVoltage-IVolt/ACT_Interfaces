@@ -42,13 +42,13 @@ namespace ACT.Core.Interfaces.DataAccess
         /// </summary>
         /// <param name="IncludeNulls">if set to <c>true</c> [include nulls].</param>
         /// <returns>System.String.</returns>
-        string GenerateSQLInsert(bool IncludeNulls);
+        string GenerateSqlInsert(bool IncludeNulls);
         /// <summary>
         /// Generates the SQL update.
         /// </summary>
         /// <param name="IncludeNulls">if set to <c>true</c> [include nulls].</param>
         /// <returns>System.String.</returns>
-        string GenerateSQLUpdate(bool IncludeNulls);
+        string GenerateSqlUpdate(bool IncludeNulls);
     
 
 

@@ -65,8 +65,8 @@ namespace ACT.Core.Interfaces.DataAccess.Excel
         /// <summary>
         /// Imports the json.
         /// </summary>
-        /// <param name="JSON">The json.</param>
+        /// <param name="json">The json.</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        bool ImportJSON(string JSON);
+        bool ImportJson(string json);
     }
 }

@@ -6,45 +6,45 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Attributes
 {
-    public class JSON_Data
+    public class Json_Data
     {
-        public string JSON_Schema_Identifier_DLL = "";
-        public string JSON_Schema_Identifier_FullClassName = "";
-        public string JSON_Schema_Example_Blank = "";
-        public string JSON_Schema_Identifier = "";
-        public Dictionary<string, string> JSON_Schema_AdditionalInfo = new Dictionary<string, string>();
-        public int DatabaseID;
+        public string JsonSchemaIdentifierDll = "";
+        public string JsonSchemaIdentifierFullClassName = "";
+        public string JsonSchemaExampleBlank = "";
+        public string JsonSchemaIdentifier = "";
+        public Dictionary<string, string> JsonSchemaAdditionalInfo = new Dictionary<string, string>();
+        public int DatabaseId;
         public DateTime? UpdateDate = null;
     }
 
-    public static class JSON_Schema_Information_Cache
+    public static class Json_Schema_Information_Cache
     {
-        public static Dictionary<string, JSON_Data> JSON_Cache = new Dictionary<string, JSON_Data>();
+        public static Dictionary<string, Json_Data> JsonCache = new Dictionary<string, Json_Data>();
 
-        public static JSON_Data Get_Schema(string Identifier)
+        public static Json_Data Get_Schema(string Identifier)
         {
-            if (JSON_Cache.ContainsKey(Identifier)) { return JSON_Cache[Identifier]; }
+            if (JsonCache.ContainsKey(Identifier)) { return JsonCache[Identifier]; }
             else { return null; }
         }
 
-        public static void AddUpdateSchema(JSON_Data Data)
+        public static void AddUpdateSchema(Json_Data Data)
         {
-            if (JSON_Cache.ContainsKey(Data.JSON_Schema_Identifier))
+            if (JsonCache.ContainsKey(Data.JsonSchemaIdentifier))
             {
-                if (Data.UpdateDate > JSON_Cache[Data.JSON_Schema_Identifier].UpdateDate)
+                if (Data.UpdateDate > JsonCache[Data.JsonSchemaIdentifier].UpdateDate)
                 {
-                    JSON_Cache[Data.JSON_Schema_Identifier] = Data;
+                    JsonCache[Data.JsonSchemaIdentifier] = Data;
                 }
             }
             else
             {
-                JSON_Cache.Add(Data.JSON_Schema_Identifier, Data);
+                JsonCache.Add(Data.JsonSchemaIdentifier, Data);
             }
         }
 
         public static void ClearCache()
         {
-            JSON_Cache.Clear();
+            JsonCache.Clear();
         }
     }
 }

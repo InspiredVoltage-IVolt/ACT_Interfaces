@@ -46,9 +46,9 @@ namespace ACT.Core.Types.PluginPackage
         [JsonProperty("types", NullValueHandling = NullValueHandling.Ignore)]
         public List<Plugin_Type_Information> Included_Plugin_Type_Implementations { get; set; } = new List<Plugin_Type_Information>();
 
-        public static ACT_Plugin_Package_Definition_Json FromJson(string json) => JsonConvert.DeserializeObject<ACT_Plugin_Package_Definition_Json>(json, JSONHelper.Converter.Settings);
+        public static ACT_Plugin_Package_Definition_Json FromJson(string json) => JsonConvert.DeserializeObject<ACT_Plugin_Package_Definition_Json>(json, JsonHelper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JSONHelper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonHelper.Converter.Settings);
     }
 
     public class FileSystem_Config

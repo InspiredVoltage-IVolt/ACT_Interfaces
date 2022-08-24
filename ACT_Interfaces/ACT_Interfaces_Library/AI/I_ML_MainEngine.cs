@@ -23,20 +23,20 @@ namespace ACT.Core.Interfaces.AI
     /// <seealso cref="ACT.Core.Interfaces.IO.I_Exportable{System.String}" />
     /// <seealso cref="ACT.Core.Interfaces.IO.I_Saveable" />
     /// <seealso cref="ACT.Core.Interfaces.Common.I_ExecuteWithParameters" />
-    public interface I_ML_MainEngine : Interfaces.IO.I_Exportable<string>, Interfaces.IO.I_Saveable, Interfaces.Common.I_ExecuteWithParameters
+    public interface I_Ml_MainEngine : Interfaces.IO.I_Exportable<string>, Interfaces.IO.I_Saveable, Interfaces.Common.I_ExecuteWithParameters
     {
         /// <summary>
         /// Active Components Drive the Data Export Interface Requirements
         /// </summary>
         /// <value>The active components.</value>
-        List<I_ML_Component> ActiveComponents { get; set; }
+        List<I_Ml_Component> ActiveComponents { get; set; }
 
         /// <summary>
         /// Passive Components affect internal calculations using short term memory
         /// components can be both active and passive Called ActivlyPassive (Passive Agressive Components :)
         /// </summary>
         /// <value>The passive components.</value>
-        List<I_ML_Component> PassiveComponents { get; set; }
+        List<I_Ml_Component> PassiveComponents { get; set; }
 
         /// <summary>
         /// Load Data Into The System

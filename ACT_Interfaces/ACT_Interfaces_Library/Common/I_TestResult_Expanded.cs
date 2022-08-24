@@ -23,7 +23,7 @@ namespace ACT.Core.Interfaces.Common
         /// <summary>
         /// Gets the Specific Transaction ID For this Action.
         /// </summary>
-        Guid TransactionID { get; set; }
+        Guid TransactionId { get; set; }
         /// <summary>
         /// Gets or sets the exceptions.
         /// </summary>

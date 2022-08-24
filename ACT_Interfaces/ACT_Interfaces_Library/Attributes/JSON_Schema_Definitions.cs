@@ -7,32 +7,32 @@ using System.Threading.Tasks;
 namespace ACT.Core.Interfaces.Attributes
 {
     [System.AttributeUsage(System.AttributeTargets.All, Inherited = false, AllowMultiple = true)]
-    public class JSON_Schema_Definitions : Attribute
+    public class Json_Schema_Definitions : Attribute
     {
-        private string _JSON_Schema_Identifier;
-        private int _NamedInt;
+        private string _jsonSchemaIdentifier;
+        private int _namedInt;
 
         /// <summary>
         /// This is a JSON Schema Definitions
         /// </summary>
-        /// <param name="JSON_Schema_Identifier"></param>
-        public JSON_Schema_Definitions(string JSON_Schema_Identifier)
+        /// <param name="jsonSchemaIdentifier"></param>
+        public Json_Schema_Definitions(string jsonSchemaIdentifier)
         {
-            this._JSON_Schema_Identifier = JSON_Schema_Identifier;
+            this._jsonSchemaIdentifier = jsonSchemaIdentifier;
         }
 
         /// <summary>
         /// JSON Schema Identifier
         /// </summary>
-        public string JSON_Schema_Identifier
+        public string Json_Schema_Identifier
         {
-            get { return _JSON_Schema_Identifier; }
+            get { return _jsonSchemaIdentifier; }
         }
 
         /// <summary>
         /// JSON Schema Identifier
         /// </summary>
-        public int NamedInt { get { return _NamedInt; } }
+        public int NamedInt { get { return _namedInt; } }
 
         /// <summary>
         /// Process the Positional String

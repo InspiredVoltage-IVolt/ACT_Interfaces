@@ -39,11 +39,11 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Create Table from ICoreObject - creates All the Columns based on Properties in the ICore Object.
         /// </summary>
         /// <param name="Class">The class.</param>
-        /// <param name="SQL">The SQL.</param>
+        /// <param name="sql">The SQL.</param>
         /// <param name="AutoExecute">if set to <c>true</c> [automatic execute].</param>
         /// <param name="CreateIdentity">if set to <c>true</c> [create identity].</param>
         /// <param name="Recursive">if set to <c>true</c> [recursive].</param>
-        void CreateTableFromICoreObject(object Class, out string SQL, bool AutoExecute = false, bool CreateIdentity = true, bool Recursive = false);
+        void CreateTableFromICoreObject(object Class, out string sql, bool AutoExecute = false, bool CreateIdentity = true, bool Recursive = false);
 
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="Name">The name.</param>
         /// <param name="GroupName">Name of the group.</param>
         /// <returns>System.String.</returns>
-        string GetStoredSQLQuery(string Name, string GroupName);
+        string GetStoredSqlQuery(string Name, string GroupName);
 
         /// <summary>
         /// Start a Transaction

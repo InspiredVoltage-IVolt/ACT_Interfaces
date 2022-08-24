@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Types.Communication
 {
-    public class Ftp_Sftp_Info_json
+    public class Ftp_Sftp_Info_Json
     {
         [JsonProperty("hostname", NullValueHandling = NullValueHandling.Ignore)]
         public string Hostname { get; set; }
@@ -21,7 +21,7 @@ namespace ACT.Core.Types.Communication
         public string Username { get; set; }
 
         [JsonProperty("tls", NullValueHandling = NullValueHandling.Ignore)]
-        public bool TLS { get; set; }
+        public bool Tls { get; set; }
 
         /// <summary>
         /// Base64 Encoded Files (UTF8)
@@ -41,8 +41,8 @@ namespace ACT.Core.Types.Communication
         [JsonProperty("port", NullValueHandling = NullValueHandling.Ignore)]
         public int Port { get; set; }
         
-        public static Ftp_Sftp_Info_json FromJson(string json) => JsonConvert.DeserializeObject<Ftp_Sftp_Info_json>(json, JSONHelper.Converter.Settings);
+        public static Ftp_Sftp_Info_Json FromJson(string json) => JsonConvert.DeserializeObject<Ftp_Sftp_Info_Json>(json, JsonHelper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JSONHelper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonHelper.Converter.Settings);
     }
 }

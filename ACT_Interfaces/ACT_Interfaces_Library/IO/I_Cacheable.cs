@@ -6,7 +6,7 @@
         /// Get Hash ID -- Calculated By Hashing the Object
         /// </summary>
         /// <value>The hash identifier.</value>
-        string HashID { get; }
+        string HashId { get; }
 
         /// <summary>
         /// If the memory is cached in the systems memory (NOT Load Balanced Safe)
@@ -37,6 +37,6 @@
         /// Retrieve the object from cache if it exists
         /// </summary>
         /// <returns>object in cache</returns>
-        object Retrieve(string HashID);
+        object Retrieve(string hashId);
     }
 }

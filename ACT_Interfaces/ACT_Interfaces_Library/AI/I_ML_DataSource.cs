@@ -24,7 +24,7 @@ namespace ACT.Core.Interfaces.AI
     /// Implements the <see cref="ACT.Core.Interfaces.IO.I_Saveable" />
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.IO.I_Saveable" />
-    public interface I_ML_DataSource : Interfaces.IO.I_Saveable
+    public interface I_Ml_DataSource : Interfaces.IO.I_Saveable
     {
     }
 }

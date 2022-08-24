@@ -3,19 +3,19 @@
 
     public interface I_EDataRecord
     {
-        byte[] uniqueRecordID { get; }
-        byte[] requestHistory { get; }
-        byte[] ownerID { get; }
-        byte[] rawData { get; }
+        byte[] UniqueRecordId { get; }
+        byte[] RequestHistory { get; }
+        byte[] OwnerId { get; }
+        byte[] RawData { get; }
     }
 
     public interface I_EDataLog
     {
-        byte[] uniqueRecordID { get; }
-        byte[] ownerID { get; }
-        byte[] requesterID { get; }
-        bool requestResult { get; }
-        byte[] requestResultReason { get; }
+        byte[] UniqueRecordId { get; }
+        byte[] OwnerId { get; }
+        byte[] RequesterId { get; }
+        bool RequestResult { get; }
+        byte[] RequestResultReason { get; }
 
 
     }
@@ -26,37 +26,37 @@
         /// <summary>
         /// Unique Message ID
         /// </summary>
-        byte[] uniqueMessageID { get; }
+        byte[] UniqueMessageId { get; }
 
         /// <summary>
         /// Global Senders ID
         /// </summary>
-        byte[] senderID { get; }
+        byte[] SenderId { get; }
 
         /// <summary>
         /// Global Recievers ID
         /// </summary>
-        byte[] reciverID { get; }
+        byte[] ReciverId { get; }
 
         /// <summary>
         /// Specific Message Subject
         /// </summary>
-        byte[] subjectText { get; }
+        byte[] SubjectText { get; }
 
         /// <summary>
         /// Specific Message Body
         /// </summary>
-        byte[] bodyText { get; }
+        byte[] BodyText { get; }
 
         /// <summary>
         /// Specific Touch Chain For This Message (Includes Complete History)
         /// </summary>
-        byte[] touchChain { get; }
+        byte[] TouchChain { get; }
 
         /// <summary>
         /// Specific Meta Data
         /// </summary>
-        bool[] metaData { get; }
+        bool[] MetaData { get; }
 
 
     }

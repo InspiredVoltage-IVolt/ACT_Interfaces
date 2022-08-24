@@ -109,14 +109,14 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <param name="ErrorMessageForClient">The error message for client.</param>
         /// <param name="TestForNoRecords">if set to <c>true</c> [test for no records].</param>
         /// <param name="NoRecordsIsClientIssue">if set to <c>true</c> [no records is client issue].</param>
-        /// <param name="TestForNULLValue">if set to <c>true</c> [test for null value].</param>
-        /// <param name="NULLValueIsClientIssue">if set to <c>true</c> [null value is client issue].</param>
+        /// <param name="testForNullValue">if set to <c>true</c> [test for null value].</param>
+        /// <param name="nullValueIsClientIssue">if set to <c>true</c> [null value is client issue].</param>
         /// <param name="TestForBlankValue">if set to <c>true</c> [test for blank value].</param>
         /// <param name="BlankValueIsClientIssue">if set to <c>true</c> [blank value is client issue].</param>
         /// <param name="TestForMoreThanOneRecord">if set to <c>true</c> [test for more than one record].</param>
         /// <param name="MoreThanOneRecorIsClientIssue">if set to <c>true</c> [more than one recor is client issue].</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
-        bool Test_Return_Data(string ErrorMessageForClient, bool TestForNoRecords, bool NoRecordsIsClientIssue, bool TestForNULLValue, bool NULLValueIsClientIssue, bool TestForBlankValue, bool BlankValueIsClientIssue, bool TestForMoreThanOneRecord, bool MoreThanOneRecorIsClientIssue);
+        bool Test_Return_Data(string ErrorMessageForClient, bool TestForNoRecords, bool NoRecordsIsClientIssue, bool testForNullValue, bool nullValueIsClientIssue, bool TestForBlankValue, bool BlankValueIsClientIssue, bool TestForMoreThanOneRecord, bool MoreThanOneRecorIsClientIssue);
 
 
     }

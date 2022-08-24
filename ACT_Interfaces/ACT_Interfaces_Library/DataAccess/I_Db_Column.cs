@@ -29,7 +29,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// <summary>
         /// ACT Standard
         /// </summary>
-        Guid ACT_Standard_ID { get; set; }
+        Guid Standard_Id { get; set; }
 
         /// <summary>
         /// Reference to the Parent Table

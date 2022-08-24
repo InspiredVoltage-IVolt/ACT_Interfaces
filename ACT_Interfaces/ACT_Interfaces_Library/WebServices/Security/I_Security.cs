@@ -5,43 +5,43 @@
     public interface I_Security
     {
 
-        string EncryptString(string AccessToken, string DataToEncrypt, string APIKey);
+        string EncryptString(string AccessToken, string DataToEncrypt, string apiKey);
 
 
-        string DecryptString(string AccessToken, string DataToDecrypt, string APIKey);
+        string DecryptString(string AccessToken, string DataToDecrypt, string apiKey);
 
 
-        string ReturnEncryptionMethods(string APIKey, List<String> Language);
+        string ReturnEncryptionMethods(string apiKey, List<String> Language);
 
 
-        bool KeepTokenAlive(string AccessToken, string APIKey);
+        bool KeepTokenAlive(string AccessToken, string apiKey);
 
 
-        string Login(string UserName, string Password, string APIKey);
+        string Login(string UserName, string Password, string apiKey);
 
 
-        string CreateUser(string Email, string UserName, string Password, string FirstName, string LastName, string APIKey);
+        string CreateUser(string Email, string UserName, string Password, string FirstName, string LastName, string apiKey);
 
 
-        string UpdateUser(string AccessToken, string UserName, string FirstName, string LastName, string APIKey);
+        string UpdateUser(string AccessToken, string UserName, string FirstName, string LastName, string apiKey);
 
 
-        string UpdatePassword(string AccessToken, string OldPassword, string NewPassword, string APIKey);
+        string UpdatePassword(string AccessToken, string OldPassword, string NewPassword, string apiKey);
 
 
-        string DeleteUser(string Token, string API);
+        string DeleteUser(string Token, string api);
 
 
-        string SendConfirmationEmail(string AccessToken, string APIKey);
+        string SendConfirmationEmail(string AccessToken, string apiKey);
 
 
-        bool SendForgotPasswordEmail(string EmailAddress, string APIKey);
+        bool SendForgotPasswordEmail(string EmailAddress, string apiKey);
 
 
-        bool AssignUserToApplication(string AccessToken, string APIKey);
+        bool AssignUserToApplication(string AccessToken, string apiKey);
 
 
-        string GetUserInfo(string AccessToken, string APIKey);
+        string GetUserInfo(string AccessToken, string apiKey);
 
     }
 }

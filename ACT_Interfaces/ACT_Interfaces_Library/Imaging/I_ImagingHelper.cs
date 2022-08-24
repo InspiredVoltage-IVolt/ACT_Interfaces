@@ -7,7 +7,7 @@ namespace ACT.Core.Interfaces.Imaging
     {
         Dictionary<string, ImageCodecInfo> Encoders { get; }
         Bitmap ResizeImage(Image Img, int Width, int Height);
-        bool SaveJPG(string Path, Image Image, int Quality);
+        bool SaveJpg(string Path, Image Image, int Quality);
         ImageCodecInfo GetEncoderInfo(string mimeType);
     }
 

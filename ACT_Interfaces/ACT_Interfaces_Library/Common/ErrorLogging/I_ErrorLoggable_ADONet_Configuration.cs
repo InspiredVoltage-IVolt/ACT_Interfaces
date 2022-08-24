@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Common.ErrorLogging
 {
-    public interface I_ErrorLoggable_ADONet_Configuration
+    public interface I_ErrorLoggable_AdoNet_Configuration
     {
         public string BaseMethod { get; set; }
-        public I_ADONet_BaseConfig BaseConfig { get; set; }
-        public I_ErrorLoggable_ADONet_Configuration FromJson(string json);
+        public I_AdoNet_BaseConfig BaseConfig { get; set; }
+        public I_ErrorLoggable_AdoNet_Configuration FromJson(string json);
         public string ToJson();
     }
 
-    public interface I_ADONet_BaseConfig
+    public interface I_AdoNet_BaseConfig
     {
 
         public string DatabaseConnectionString { get; set; }

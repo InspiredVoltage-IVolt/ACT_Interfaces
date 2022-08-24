@@ -11,9 +11,9 @@ namespace ACT.Core.Types.Communication
     /// <summary>
     /// MUST SUPPORT ALL OF THESE METHODS ::: EMAIL, SMS,MMS,WEBPOST,WEBGET,PHONE,FTP,SFTP,MESSAGEQUE,NETWORKFILE
     /// </summary>
-    public class Communication_Implementation_Info_JSON
+    public class Communication_Implementation_Info_Json
     {
-        I_Author _Email_Phone_ContactInfo = null;
+        I_Author _emailPhoneContactInfo = null;
 
         [JsonProperty("method", NullValueHandling = NullValueHandling.Ignore)]
         public string Method { get; set; }
@@ -23,24 +23,24 @@ namespace ACT.Core.Types.Communication
         {
             get
             {
-                try { return _Email_Phone_ContactInfo.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_BASE64JSON))); }
+                try { return _emailPhoneContactInfo.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_Base64Json))); }
                 catch { return null; }
             }
             set
             {
-                try { IEmailPhoneContactInfo_BASE64JSON = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(_Email_Phone_ContactInfo.ExportToJson())); }
-                catch (Exception ex) { throw new Exception("Unable To convert the value to the Base64 String.. " + ex.Message, ex); }
+                try { IEmailPhoneContactInfo_Base64Json = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(_emailPhoneContactInfo.ExportToJson())); }
+                catch (Exception Ex) { throw new Exception("Unable To convert the value to the Base64 String.. " + Ex.Message, Ex); }
             }
         }
 
         [JsonProperty("i-email_phone-contact-info", NullValueHandling = NullValueHandling.Ignore)]
-        public string IEmailPhoneContactInfo_BASE64JSON { get; set; }
+        public string IEmailPhoneContactInfo_Base64Json { get; set; }
 
         [JsonProperty("ftpsftp-info", NullValueHandling = NullValueHandling.Ignore)]
-        public string FTPSFTP_BASE64INFO { get; set; }
+        public string Ftpsftp_Base64Info { get; set; }
         
         [JsonProperty("web-url", NullValueHandling = NullValueHandling.Ignore)]
-        public string WEB_URL { get; set; }
+        public string Web_Url { get; set; }
 
         [JsonProperty("web-variable-key-value-data", NullValueHandling = NullValueHandling.Ignore)]
         public JSON.KeyValue_Information_Simple_Json Web_Variable_Data { get; set; }
@@ -57,9 +57,9 @@ namespace ACT.Core.Types.Communication
         [JsonProperty("message-que-data", NullValueHandling = NullValueHandling.Ignore)]
         public string MessageQueData { get; set; }
 
-        public static Communication_Implementation_Info_JSON FromJson(string json) => JsonConvert.DeserializeObject<Communication_Implementation_Info_JSON>(json, JSONHelper.Converter.Settings);
+        public static Communication_Implementation_Info_Json FromJson(string json) => JsonConvert.DeserializeObject<Communication_Implementation_Info_Json>(json, JsonHelper.Converter.Settings);
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JSONHelper.Converter.Settings);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonHelper.Converter.Settings);
     }
 
    

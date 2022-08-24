@@ -14,7 +14,7 @@ namespace ACT.Core.Interfaces.Application
         /// <summary>
         /// Unique Application ID
         /// </summary>
-        Guid ID { get; }
+        Guid Id { get; }
 
         /// <summary>
         /// Name of the Application
@@ -24,7 +24,7 @@ namespace ACT.Core.Interfaces.Application
         /// <summary>
         /// Author ID
         /// </summary>
-        Guid AuthorID { get; }
+        Guid AuthorId { get; }
 
         /// <summary>
         /// If this application is open source

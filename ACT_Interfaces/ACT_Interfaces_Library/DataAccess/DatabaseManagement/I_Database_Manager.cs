@@ -69,7 +69,7 @@ namespace ACT.Core.Interfaces.DataAccess.DatabaseManagement
         /// </summary>
         /// <param name="functionDefinition"></param>
         /// <returns>Test Result Expanded</returns>
-        Common.I_ResultExpanded CreateCustomDBType(I_Db_DataType userDefinedDataType);
+        Common.I_ResultExpanded CreateCustomDbType(I_Db_DataType userDefinedDataType);
 
 
     }

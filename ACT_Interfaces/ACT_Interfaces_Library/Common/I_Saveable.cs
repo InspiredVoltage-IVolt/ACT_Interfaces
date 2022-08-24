@@ -40,7 +40,7 @@ namespace ACT.Core.Interfaces.Common
 
         /// <summary>Deletes this instance.</summary>
         /// <returns>I_Result.</returns>
-        I_Result Delete(Guid TestResult_TransactionID);
+        I_Result Delete(Guid testResultTransactionId);
     }
 
 }

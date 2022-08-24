@@ -22,14 +22,14 @@ namespace ACT.Core.Interfaces.DataAccess
     /// Implements the <see cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.Plugins. Plugins.I_Plugin " />
-    public interface I_DB_Table_Archive :  Plugins.I_Plugin 
+    public interface I_Db_Table_Archive :  Plugins.I_Plugin 
     {
         /// <summary>
         /// Generates the archive SQL.
         /// </summary>
         /// <param name="TableName">Name of the table.</param>
         /// <returns>System.String.</returns>
-        string GenerateArchiveSQL(string TableName);
+        string GenerateArchiveSql(string TableName);
 
         /// <summary>
         /// 

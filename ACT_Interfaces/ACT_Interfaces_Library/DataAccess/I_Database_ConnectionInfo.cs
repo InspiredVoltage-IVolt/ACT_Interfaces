@@ -25,7 +25,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the type of the database.
         /// </summary>
         /// <value>The type of the database.</value>
-        Enums.Database.Database_Engine DBType { get; set; }
+        Enums.Database.Database_Engine DbType { get; set; }
         /// <summary>
         /// Gets or sets the provider.
         /// </summary>
@@ -45,7 +45,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the user identifier.
         /// </summary>
         /// <value>The user identifier.</value>
-        string UserID { get; set; }
+        string UserId { get; set; }
         /// <summary>
         /// Gets or sets the encrypted password.
         /// </summary>
@@ -65,12 +65,12 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the odbckey.
         /// </summary>
         /// <value>The odbckey.</value>
-        string ODBCKEY { get; set; }
+        string Odbckey { get; set; }
         /// <summary>
         /// Gets or sets the odbcke y2.
         /// </summary>
         /// <value>The odbcke y2.</value>
-        string ODBCKEY2 { get; set; }
+        string Odbckey2 { get; set; }
         /// <summary>
         /// Gets or sets the platform.
         /// </summary>
@@ -125,7 +125,7 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the dba privilege.
         /// </summary>
         /// <value>The dba privilege.</value>
-        string DBAPrivilege { get; set; }
+        string DbaPrivilege { get; set; }
         /// <summary>
         /// Gets or sets the trusted connection.
         /// </summary>

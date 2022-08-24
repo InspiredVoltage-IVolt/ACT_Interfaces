@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Types
 {
-    public static class JSONHelper
+    public static class JsonHelper
     {
         public static class Converter
         {

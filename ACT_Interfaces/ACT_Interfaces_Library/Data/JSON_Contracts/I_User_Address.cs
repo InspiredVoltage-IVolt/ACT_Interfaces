@@ -8,7 +8,7 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
     /// </summary>
     public interface I_User_Address :  Plugins.I_Plugin 
     {   
-        ACT.I_Identifier ID_Processor { get; set; }
+        ACT.I_Identifier Id_Processor { get; set; }
         string Name { get; set; }
         ArrayList AllAddressLines { get; set; }
         string Address1 { get; set; }

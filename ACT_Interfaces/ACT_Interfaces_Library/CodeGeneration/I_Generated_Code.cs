@@ -53,7 +53,7 @@ namespace ACT.Core.Interfaces.CodeGeneration
         /// Gets or sets the web service SOAP asmx.
         /// </summary>
         /// <value>The web service SOAP asmx.</value>
-        string WebServiceSoapASMX { get; set; }
+        string WebServiceSoapAsmx { get; set; }
         /// <summary>
         /// Gets or sets the name of the table.
         /// </summary>

@@ -9,8 +9,8 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
 {
     public interface I_Author : Plugins.I_Plugin, IO.I_Exportable<I_Author>
     {        
-        string ACTID { get; set; }
-        string ExternalID { get; set; }
+        string Actid { get; set; }
+        string ExternalId { get; set; }
 
         string FirstName { get; set; }
         string LastName { get; set; }

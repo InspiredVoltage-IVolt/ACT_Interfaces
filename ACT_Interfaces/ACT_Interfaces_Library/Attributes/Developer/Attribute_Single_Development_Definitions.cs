@@ -9,33 +9,33 @@ namespace ACT.Core.Interfaces.Attributes.Developer
 {
     public class Attribute_Single_Development_Definition
     {
-        int? _Priority = 0;
+        int? _priority = 0;
 
         [JsonProperty("classname", NullValueHandling = NullValueHandling.Ignore)]
-        public string classname { get; set; }
+        public string Classname { get; set; }
 
         [JsonProperty("typename", NullValueHandling = NullValueHandling.Ignore)]
-        public string typename { get; set; }
+        public string Typename { get; set; }
 
         [JsonProperty("todo", NullValueHandling = NullValueHandling.Ignore)]
-        public string todo { get; set; }
+        public string Todo { get; set; }
 
         [JsonProperty("todo_description", NullValueHandling = NullValueHandling.Ignore)]
-        public string todo_description { get; set; }
+        public string Todo_Description { get; set; }
 
         [JsonProperty("removebeforerelease", NullValueHandling = NullValueHandling.Ignore)]
-        public string removebeforerelease { get; set; }
+        public string Removebeforerelease { get; set; }
 
         [JsonProperty("removebeforerelease_description", NullValueHandling = NullValueHandling.Ignore)]
-        public string removebeforerelease_description { get; set; }
+        public string Removebeforerelease_Description { get; set; }
 
         [JsonProperty("priority", NullValueHandling = NullValueHandling.Include)]
-        public int? priority { get { return _Priority; } set { if (value != null) { _Priority = value; } } }
+        public int? Priority { get { return _priority; } set { if (value != null) { _priority = value; } } }
 
         [JsonProperty("originadeveloperinfo", NullValueHandling = NullValueHandling.Ignore)]
-        public string originadeveloperinfo { get; set; }
+        public string Originadeveloperinfo { get; set; }
 
         [JsonProperty("lastdeveloperinfo", NullValueHandling = NullValueHandling.Ignore)]
-        public string lastdeveloperinfo { get; set; }
+        public string Lastdeveloperinfo { get; set; }
     }
 }

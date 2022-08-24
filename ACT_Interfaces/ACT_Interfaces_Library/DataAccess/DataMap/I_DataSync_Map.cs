@@ -8,9 +8,9 @@ namespace ACT.Core.Interfaces.DataAccess.DataSync
 {
     public interface I_DataSync_Map : IO.I_Saveable 
     {        
-        Guid AddColumn(I_Db SourceDatabase, string FullyQualified_ColumnName, uint Importamce, string ColumnGroupName);
+        Guid AddColumn(I_Db SourceDatabase, string fullyQualifiedColumnName, uint Importamce, string ColumnGroupName);
         void ReCreate_AssociationMap();
-        void DeleteSpecificNap(Guid MapID);
+        void DeleteSpecificNap(Guid mapId);
         void DeleteAll(bool LogMap);
         byte[] GenerateVisualMap();
     }

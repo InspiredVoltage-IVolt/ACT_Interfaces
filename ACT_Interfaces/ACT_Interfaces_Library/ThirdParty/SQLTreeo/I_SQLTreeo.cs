@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.ThirdParty.SQLTreeo
 {
-    public interface I_SQLTreeo_Data
+    public interface I_SqlTreeo_Data
     {
 
     }

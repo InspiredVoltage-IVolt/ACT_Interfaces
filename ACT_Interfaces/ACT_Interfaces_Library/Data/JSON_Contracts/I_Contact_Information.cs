@@ -9,9 +9,9 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
     /// </summary>
     public interface I_Contact_Information
     {
-        I_Identifier IDProcessor { get; set; }
-        Guid? ACT_ID { get; set; }
-        string External_ID { get; set; }
+        I_Identifier IdProcessor { get; set; }
+        Guid? Id { get; set; }
+        string External_Id { get; set; }
         string FirstName { get; set; }
         string LastName { get; set; }
         string MiddleName { get; set; }

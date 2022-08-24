@@ -28,7 +28,7 @@ namespace ACT.Core.Interfaces.Plugins
         /// <summary>
         /// DLLFileName
         /// </summary>
-        string DLL_FileName { get; }
+        string Dll_FileName { get; }
 
         /// <summary>
         /// Used for when a Plugin Can Implement Different End Implementations

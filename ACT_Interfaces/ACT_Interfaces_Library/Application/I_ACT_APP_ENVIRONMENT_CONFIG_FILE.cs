@@ -17,13 +17,13 @@ namespace ACT.Core.Interfaces.Application
     /// <summary>
     /// Interface I_ACT_APP_ENVIRONMENT_CONFIG_FILE
     /// </summary>
-    public interface I_ACT_APP_ENVIRONMENT_CONFIG_FILE
+    public interface I_ACT_App_Environment_Config_File
     {
         /// <summary>
         /// Gets or sets the environment identifier.
         /// </summary>
         /// <value>The environment identifier.</value>
-        Guid EnvironmentID { get; set; }
+        Guid EnvironmentId { get; set; }
         /// <summary>
         /// Sets the name of the environment.
         /// </summary>

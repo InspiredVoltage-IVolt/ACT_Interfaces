@@ -89,7 +89,7 @@
         void UpdateAddress(I_User_Address AddressToUpdate);
         void DeleteAddress(I_User_Address AddressToDelete);
 
-        I_User_Address GetAddressByID(Guid ID);
+        I_User_Address GetAddressById(Guid id);
         I_User_Address GetAddressByName(string Name);
         List<I_User_Address> GetAddresses();
         I_User_Address GetPrimaryBillingAddress();
@@ -98,7 +98,7 @@
 
 
         List<I_Contact_Information> GetUserContacts();
-        I_Contact_Information GetContact(Guid ID);
+        I_Contact_Information GetContact(Guid id);
         List<I_Contact_Information> Search(string SearchString);
 
         void UpdateContact(I_Contact_Information ContactToUpdate);

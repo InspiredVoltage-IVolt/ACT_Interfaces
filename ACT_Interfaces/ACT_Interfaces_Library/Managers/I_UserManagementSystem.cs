@@ -9,8 +9,8 @@ namespace ACT.Core.Interfaces.Managers
     public interface I_UserManagementSystem :Security.I_SecurityProvider
     {
 
-        I_User_Address GetUserPrimaryShippingAddress(string user_id);
-        I_User_Address GetUserPrimaryBillingAddress(string user_id);
+        I_User_Address GetUserPrimaryShippingAddress(string userId);
+        I_User_Address GetUserPrimaryBillingAddress(string userId);
 
 
 

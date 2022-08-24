@@ -3,11 +3,11 @@
 
     public class ACTProjectData
     {
-        string _XML = "";
+        string _xml = "";
 
-        public string XML { get { return _XML; } set { _XML = value; } }
+        public string Xml { get { return _xml; } set { _xml = value; } }
 
-        public string ID { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
     }
@@ -16,22 +16,22 @@
     public interface I_ACTProjects
     {
 
-        List<ACTProjectData> GetMyProjects(string SecurityToken, string APIKey);
+        List<ACTProjectData> GetMyProjects(string SecurityToken, string apiKey);
 
 
-        bool SaveProject(string SecurityToken, ACTProjectData Project, string APIKey);
+        bool SaveProject(string SecurityToken, ACTProjectData Project, string apiKey);
 
 
-        bool DeleteProject(string SecurityToken, string ID, string APIKey);
+        bool DeleteProject(string SecurityToken, string id, string apiKey);
 
 
-        ACTProjectData GetProjectByName(string SecurityToken, string Name, string APIKey);
+        ACTProjectData GetProjectByName(string SecurityToken, string Name, string apiKey);
 
 
-        string GetAllProjects(string SecurityToken, string APIKey);
+        string GetAllProjects(string SecurityToken, string apiKey);
 
 
-        bool SaveAllProjects(string SecurityToken, string APIKey, bool OverwriteExisting, string XML);
+        bool SaveAllProjects(string SecurityToken, string apiKey, bool OverwriteExisting, string xml);
     }
 
 }

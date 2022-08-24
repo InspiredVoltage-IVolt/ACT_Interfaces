@@ -27,7 +27,7 @@ namespace ACT.Core.Interfaces.AI
         /// Internal ID for long term data storage and retrieval
         /// </summary>
         /// <value>The identifier.</value>
-        Guid ID { get; }
+        Guid Id { get; }
 
         /// <summary>
         /// Unique Identifier External and Unstored

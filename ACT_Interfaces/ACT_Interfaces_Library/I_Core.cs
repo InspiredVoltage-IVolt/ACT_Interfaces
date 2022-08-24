@@ -15,7 +15,7 @@ namespace ACT.Core.Interfaces
         /// Always will be looked for in Current Domain Base Directory\\Resources\\
         /// Unless FULL PATH SPECIFIED
         /// </summary>
-        string ConfigurationJSONFileName { get; set; }
+        string ConfigurationJsonFileName { get; set; }
 
         /// <summary>
         /// Has Cached Errors

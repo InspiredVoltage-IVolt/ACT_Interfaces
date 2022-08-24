@@ -10,21 +10,21 @@ namespace ACT.Core.Interfaces.Security
         /// <summary>
         /// A Unique Provider Identity Within The ACT Scope  Example: ActiveDirectory
         /// </summary>
-        string ProviderUID { get; }
+        string ProviderUid { get; }
 
         /// <summary>
         /// Validates A User Token
         /// </summary>
-        /// <param name="TokenID"></param>
+        /// <param name="tokenId"></param>
         /// <returns></returns>
-        bool IsTokenValid(string TokenID, string AdditionalData);
+        bool IsTokenValid(string tokenId, string AdditionalData);
 
         /// <summary>
         /// Generates A New Security Token and Populates the UserInfo Class
         /// </summary>
         /// <param name="UserInfo"></param>
         /// <returns></returns>
-        bool GenerateToken(I_UserInfo UserInfo, string AdditionalData, Guid ApplicationID);
+        bool GenerateToken(I_UserInfo UserInfo, string AdditionalData, Guid applicationId);
 
         /// <summary>
         /// Child Security Providers Provide Additional Options For a Multi Tier Authentication Application
@@ -53,14 +53,14 @@ namespace ACT.Core.Interfaces.Security
         /// <param name="UserInfo"></param>
         /// <param name="Group"></param>
         /// <returns>bool</returns>
-        bool IsUserMemberOfGroup(string UserID, string GroupName, string AdditionalData);
+        bool IsUserMemberOfGroup(string userId, string GroupName, string AdditionalData);
 
         /// <summary>
         /// Get The Group ID From The Name
         /// </summary>
         /// <param name="GroupName"></param>
         /// <returns></returns>
-        Guid GetGroupID(string GroupName, string AdditionalData);
+        Guid GetGroupId(string GroupName, string AdditionalData);
 
         /// <summary>
         /// Returns all the available groups
@@ -71,9 +71,9 @@ namespace ACT.Core.Interfaces.Security
         /// <summary>
         /// Adds A User To The Group
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <param name="GroupID"></param>
-        I_ResultExpanded AddUserToGroup(string UserID, string GroupName, string AdditionalData);
+        I_ResultExpanded AddUserToGroup(string userId, string GroupName, string AdditionalData);
 
         #endregion
 
@@ -87,16 +87,16 @@ namespace ACT.Core.Interfaces.Security
         /// <summary>
         /// Get Encryption Key
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <returns>Encryption Key</returns>
-        string GetEncryptionKey(string UserID, string AdditionalData);
+        string GetEncryptionKey(string userId, string AdditionalData);
 
         /// <summary>
         /// Get User ID
         /// </summary>
         /// <param name="AccessToken"></param>
         /// <returns></returns>
-        string GetUserID(string AccessToken, string AdditionalData);
+        string GetUserId(string AccessToken, string AdditionalData);
 
         /// <summary>
         /// Sends the Forgot Password Email
@@ -108,9 +108,9 @@ namespace ACT.Core.Interfaces.Security
         /// <summary>
         /// Returns a Delimeted string of User Info.  Delimiters are defined in ACT Configuration Settings.
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <returns></returns>
-        I_UserInfo GetUserInfo(string UserID, string AdditionalData);
+        I_UserInfo GetUserInfo(string userId, string AdditionalData);
 
         /// <summary>
         /// Creates A New User
@@ -132,34 +132,34 @@ namespace ACT.Core.Interfaces.Security
         /// <summary>
         /// Update Password
         /// </summary>
-        /// <param name="UserID">UserID of Member to be updated</param>
+        /// <param name="userId">UserID of Member to be updated</param>
         /// <param name="Password">New Unencrypted Password</param>
         /// <param name="AdditionalData">Additional Data</param>
         /// <returns></returns>
-        I_ResultExpanded UpdatePassword(string UserID, string Password, string AdditionalData);
+        I_ResultExpanded UpdatePassword(string userId, string Password, string AdditionalData);
 
         /// <summary>
         /// Update UserName
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <param name="UserName"></param>
         /// <returns></returns>
-        I_ResultExpanded UpdateUserName(string UserID, string UserName, string AdditionalData);
+        I_ResultExpanded UpdateUserName(string userId, string UserName, string AdditionalData);
 
         /// <summary>
         /// Update Email
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <param name="Email"></param>
         /// <returns></returns>
-        I_ResultExpanded UpdateEmail(string UserID, string Email, string AdditionalData);
+        I_ResultExpanded UpdateEmail(string userId, string Email, string AdditionalData);
 
         /// <summary>
         /// Delete User
         /// </summary>
-        /// <param name="UserID"></param>
+        /// <param name="userId"></param>
         /// <returns></returns>
-        I_ResultExpanded DeleteUser(string UserID, string AdditionalData);
+        I_ResultExpanded DeleteUser(string userId, string AdditionalData);
 
         /// <summary>
         /// Adds a User To The 

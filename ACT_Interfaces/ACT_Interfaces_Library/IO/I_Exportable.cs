@@ -26,15 +26,15 @@ namespace ACT.Core.Interfaces.IO
 
         /// <summary>Import From JSON</summary>
         /// <returns>ClassS</returns>
-        T ImportDataFromJson(string JSONString);
+        T ImportDataFromJson(string jsonString);
 
         /// <summary>Export To Custom</summary>
         /// <returns>String</returns>
-        string CustomExport(string Identifier, string JSONString);
+        string CustomExport(string Identifier, string jsonString);
 
         /// <summary>Import From Custom</summary>
         /// <returns>Populated Class</returns>
-        T CustomImport(string Identifier, string JSONString);
+        T CustomImport(string Identifier, string jsonString);
 
 
     }

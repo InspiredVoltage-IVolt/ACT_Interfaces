@@ -5,7 +5,7 @@
     /// </summary>
     public interface I_Configurable
     {
-        bool LoadConfiguration(string JSONData);
+        bool LoadConfiguration(string jsonData);
         bool SaveConfiguration(string FilePath);
         Dictionary<string, string> ConfigurationSettings { get; set; }
     }

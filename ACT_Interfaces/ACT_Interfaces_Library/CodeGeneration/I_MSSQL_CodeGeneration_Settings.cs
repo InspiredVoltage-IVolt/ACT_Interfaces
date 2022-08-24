@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the Code Generation Settings
     /// </summary>
-    public interface I_MSSQL_CodeGeneration_Settings
+    public interface I_Mssql_CodeGeneration_Settings
     {
         /// <summary>
         /// Gets or sets the database connection string.
@@ -25,7 +25,7 @@
         /// Gets or sets a value indicating whether [generate basic actprocs].
         /// </summary>
         /// <value><c>true</c> if [generate basic actprocs]; otherwise, <c>false</c>.</value>
-        bool Generate_Basic_ACTPROCS { get; set; }
+        bool Generate_Basic_Actprocs { get; set; }
         /// <summary>
         /// Gets or sets a value indicating whether [execute after generation].
         /// </summary>

@@ -15,10 +15,10 @@ namespace ACT.Core.Interfaces.Managers
         ArrayList HighImportanceMessages { get; set; }
         int ImportanceExecuteNowMin { get; set; }
 
-        (string, bool) POP();
-        string  PUSH(string message, int Importance);
-        string  PUSHTOTOP(string message, int Importance);
-        string  PUSHTOBOTTOM(string message, int Importance);
+        (string, bool) Pop();
+        string  Push(string message, int Importance);
+        string  Pushtotop(string message, int Importance);
+        string  Pushtobottom(string message, int Importance);
         
         SortedDictionary<Guid, Func<string, int, bool>> ProcessorPlugins { get; set; }
 

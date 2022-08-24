@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Cloud
 {
-    public interface ILoginPage
+    public interface I_ILoginPage
     {
     }
 }

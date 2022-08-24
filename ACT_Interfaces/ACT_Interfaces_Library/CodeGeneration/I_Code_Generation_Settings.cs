@@ -134,7 +134,7 @@
         /// Gets or sets the name of the DLL.
         /// </summary>
         /// <value>The name of the DLL.</value>
-        string DLL_Output_Name { get; set; }
+        string Dll_Output_Name { get; set; }
 
         /// <summary>
         /// Gets or sets the name space.
@@ -185,7 +185,7 @@
         /// <summary>
         /// Notification Implementation Information Data
         /// </summary>
-        string Notification_Information_Information_JSON { get; set; }
+        string Notification_Information_Information_Json { get; set; }
 
         #endregion
 
@@ -231,7 +231,7 @@
 
         #region Nuget Publish Information
 
-        string APIKeyIfNew { get; set; }
+        string ApiKeyIfNew { get; set; }
         string PackageName { get; set; }
         string Version { get; set; }
         Data.I_NameValue_Data PackageInformation { get; set; }

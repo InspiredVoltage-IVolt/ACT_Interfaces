@@ -27,12 +27,12 @@ namespace ACT.Core.Interfaces.DataAccess
         /// Gets or sets the system type identifier.
         /// </summary>
         /// <value>The system type identifier.</value>
-        int SystemTypeID { get; set; }
+        int SystemTypeId { get; set; }
         /// <summary>
         /// Gets or sets the user type identifier.
         /// </summary>
         /// <value>The user type identifier.</value>
-        int UserTypeID { get; set; }
+        int UserTypeId { get; set; }
         /// <summary>
         /// Gets or sets a value indicating whether this instance is user type.
         /// </summary>

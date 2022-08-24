@@ -5,7 +5,7 @@ namespace ACT.Core.Interfaces.Security
     public interface I_LoginResult :  Plugins.I_Plugin 
     {
         bool Success { get; set; }
-        string TokenID { get; set; }
+        string TokenId { get; set; }
         DateTime TokenValidTill { get; set; }
 
         Dictionary<string, string> AdditionalInformation { get; set; }

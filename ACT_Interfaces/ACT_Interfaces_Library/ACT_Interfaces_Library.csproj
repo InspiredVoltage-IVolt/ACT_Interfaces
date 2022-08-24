@@ -12,24 +12,27 @@
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>2.1.9</Version>
-    <Authors>IVolt, Mark Alicz, Darkbit</Authors>
-    <Description>Full List of Interfaces</Description>
-    <Copyright>2020-2021 IVolt, LLC</Copyright>
-    <PackageProjectUrl>https://www.ivolt.io/</PackageProjectUrl>
+    <Authors>Mark Alicz - Darkbit</Authors>
+    <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
+    <Copyright>1998-2022 Mark ALicz, LLC</Copyright>
+    <PackageProjectUrl>https://www.act-net.us/</PackageProjectUrl>
     <PackageIcon>ACT_Common_Icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
-    <PackageTags>.NET 6, Interface Library, ACT Library</PackageTags>
-    <PackageReleaseNotes>Modified some Core Interfaces to add machine specific and user spacific protection.</PackageReleaseNotes>
+    <PackageTags>.NET 6, Interface Library, ACT Ecosystem Interfaces, Common Interfaces</PackageTags>
+    <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyVersion>2.1.9</AssemblyVersion>
     <FileVersion>2.1.9</FileVersion>
-    <PackageLicenseExpression>  GPL-3.0-only</PackageLicenseExpression>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <AssemblyName>ACT_Interfaces</AssemblyName>
     <Configurations>Debug;Release;ARMDebug;ARM</Configurations>
     <Platforms>AnyCPU;x64;ARM64</Platforms>
     <DebugType>full</DebugType>
+    <PackageId>ACT.Core.Interfaces</PackageId>
+    <Title>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Title>
+    <Company>IVolt, LLC</Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

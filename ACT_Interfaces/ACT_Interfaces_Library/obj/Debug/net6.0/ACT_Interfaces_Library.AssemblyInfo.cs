@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("IVolt, Mark Alicz, Darkbit")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("IVolt, LLC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyCopyrightAttribute("2020-2021 IVolt, LLC")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Full List of Interfaces")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("1998-2022 Mark ALicz, LLC")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Common Interfaces used across the ACT Application or can be used outside the ACT " +
+    "Ecosystem")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.9")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACT_Interfaces")]

@@ -12,14 +12,14 @@
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>2.1.9</Version>
-    <Authors>Mark Alicz - Darkbit</Authors>
+    <Authors>Mark Alicz </Authors>
     <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
-    <Copyright>1998-2022 Mark ALicz, LLC</Copyright>
+    <Copyright>1998-2022 Mark Alicz</Copyright>
     <PackageProjectUrl>https://www.act-net.us/ACT/ACT_Interfaces/</PackageProjectUrl>
     <PackageIcon>ACT_Common_Icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
-    <PackageTags>.NET 6, Interface Library, ACT Ecosystem Interfaces, Common Interfaces</PackageTags>
+    <PackageTags>.NET 6; Common Interfaces; ACT; ACT Interfaces; ACT Support Assembly</PackageTags>
     <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
     <AssemblyVersion>2.1.9</AssemblyVersion>
     <FileVersion>2.1.9</FileVersion>

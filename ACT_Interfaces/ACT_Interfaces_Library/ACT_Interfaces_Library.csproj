@@ -7,7 +7,7 @@
     <RootNamespace>ACT.Core.Interfaces</RootNamespace>
     <ApplicationIcon>ACT_Interfaces.ico</ApplicationIcon>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <BaseOutputPath>D:\IVolt_Releases\ACT-Interfaces</BaseOutputPath>
+    <BaseOutputPath>D:\IVolt_Releases\ACT_Interfaces\</BaseOutputPath>
     <SignAssembly>True</SignAssembly>
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -15,13 +15,12 @@
     <Authors>Mark Alicz - Darkbit</Authors>
     <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
     <Copyright>1998-2022 Mark ALicz, LLC</Copyright>
-    <PackageProjectUrl>https://www.act-net.us/</PackageProjectUrl>
+    <PackageProjectUrl>https://www.act-net.us/ACT/ACT_Interfaces/</PackageProjectUrl>
     <PackageIcon>ACT_Common_Icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
     <PackageTags>.NET 6, Interface Library, ACT Ecosystem Interfaces, Common Interfaces</PackageTags>
     <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
-    <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyVersion>2.1.9</AssemblyVersion>
     <FileVersion>2.1.9</FileVersion>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
@@ -33,42 +32,73 @@
     <PackageId>ACT.Core.Interfaces</PackageId>
     <Title>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Title>
     <Company>IVolt, LLC</Company>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARM|ARM64'">
     <Optimize>True</Optimize>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARMDebug|ARM64'">
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <Optimize>True</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Optimize>True</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <FileAlignment>4096</FileAlignment>
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARMDebug|AnyCPU'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARM|AnyCPU'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARMDebug|x64'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ARM|x64'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Deterministic>False</Deterministic>
   </PropertyGroup>
 
   <ItemGroup>

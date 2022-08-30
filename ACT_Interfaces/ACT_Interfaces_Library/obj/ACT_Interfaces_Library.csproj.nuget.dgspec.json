@@ -5,10 +5,10 @@
   },
   "projects": {
     "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj": {
-      "version": "2.1.9",
+      "version": "2.1.9.1",
       "restore": {
         "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
-        "projectName": "ACT.Core.Interfaces",
+        "projectName": "ACT_Interfaces",
         "projectPath": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
         "packagesPath": "C:\\Users\\MarkAlicz\\.nuget\\packages\\",
         "outputPath": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\obj\\",

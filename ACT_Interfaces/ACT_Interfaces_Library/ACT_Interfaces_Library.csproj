@@ -11,7 +11,7 @@
     <SignAssembly>True</SignAssembly>
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.9</Version>
+    <Version>2.1.9.1</Version>
     <Authors>Mark Alicz </Authors>
     <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
     <Copyright>1998-2022 Mark Alicz</Copyright>
@@ -21,15 +21,15 @@
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
     <PackageTags>.NET 6; Common Interfaces; ACT; ACT Interfaces; ACT Support Assembly</PackageTags>
     <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
-    <AssemblyVersion>2.1.9</AssemblyVersion>
-    <FileVersion>2.1.9</FileVersion>
+    <AssemblyVersion>2.1.9.1</AssemblyVersion>
+    <FileVersion>2.1.9.1</FileVersion>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <AssemblyName>ACT_Interfaces</AssemblyName>
     <Configurations>Debug;Release;ARMDebug;ARM</Configurations>
     <Platforms>AnyCPU;x64;ARM64</Platforms>
     <DebugType>full</DebugType>
-    <PackageId>ACT.Core.Interfaces</PackageId>
+    <PackageId>ACT_Interfaces</PackageId>
     <Title>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Title>
     <Company>IVolt, LLC</Company>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>

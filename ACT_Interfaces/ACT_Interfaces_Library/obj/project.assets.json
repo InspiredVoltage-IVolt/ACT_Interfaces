@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "ACT_Enums/2.1.3": {
+      "ACT_Enums/2.1.5.9": {
         "type": "package",
         "compile": {
           "lib/net6.0/ACT_Enums.dll": {}
@@ -89,7 +89,7 @@
           }
         }
       },
-      "NLog/4.7.15": {
+      "NLog/5.0.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NLog.dll": {
@@ -137,7 +137,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.3": {
+      "System.Data.SqlClient/4.8.4": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -243,15 +243,15 @@
     }
   },
   "libraries": {
-    "ACT_Enums/2.1.3": {
-      "sha512": "+zvv+X3rmch8JfwV9OgFXKqWPyKENTwILe7tjQ5lzrSqOBkVsU+aWU73dxehKO5af7BPcg0ktADXdDOpxFTZ3Q==",
+    "ACT_Enums/2.1.5.9": {
+      "sha512": "F2VmaJRxQFBuwF9iYUD8Ggmjn00Jqml0djfMPsphswUUlSDvPi3vM1IMeVFCWQM/oxBGHN3MD1HdUzskfU1lbQ==",
       "type": "package",
-      "path": "act_enums/2.1.3",
+      "path": "act_enums/2.1.5.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ACT_Common_Icon.png",
-        "act_enums.2.1.3.nupkg.sha512",
+        "act_enums.2.1.5.9.nupkg.sha512",
         "act_enums.nuspec",
         "content/Icon.ico",
         "contentFiles/any/net6.0/Icon.ico",
@@ -378,36 +378,27 @@
         "packageIcon.png"
       ]
     },
-    "NLog/4.7.15": {
-      "sha512": "vXMmsK17hXnMsKd8BdCrJzvb8JMT0+cPgBGRfnqcXIb6y8b6RMIZexO4hMhQgifcTHgU7dbubvCR5A5wX6Ne+A==",
+    "NLog/5.0.4": {
+      "sha512": "hMyC7jq1m7c339DZXTRz96b+0YsIYSwAUB8sAWMtqXd2uwJjYe+y1k74fbItODPqDuE/krd6A4mxew9gLMS+PQ==",
       "type": "package",
-      "path": "nlog/4.7.15",
+      "path": "nlog/5.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid44/NLog.dll",
-        "lib/monoandroid44/NLog.xml",
+        "N.png",
         "lib/net35/NLog.dll",
         "lib/net35/NLog.xml",
-        "lib/net40-client/NLog.dll",
-        "lib/net40-client/NLog.xml",
         "lib/net45/NLog.dll",
         "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
         "lib/netstandard1.3/NLog.dll",
         "lib/netstandard1.3/NLog.xml",
         "lib/netstandard1.5/NLog.dll",
         "lib/netstandard1.5/NLog.xml",
         "lib/netstandard2.0/NLog.dll",
         "lib/netstandard2.0/NLog.xml",
-        "lib/sl4/NLog.dll",
-        "lib/sl4/NLog.xml",
-        "lib/sl5/NLog.dll",
-        "lib/sl5/NLog.xml",
-        "lib/wp8/NLog.dll",
-        "lib/wp8/NLog.xml",
-        "lib/xamarinios10/NLog.dll",
-        "lib/xamarinios10/NLog.xml",
-        "nlog.4.7.15.nupkg.sha512",
+        "nlog.5.0.4.nupkg.sha512",
         "nlog.nuspec"
       ]
     },
@@ -474,10 +465,10 @@
         "version.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.3": {
-      "sha512": "yERfVLXAY0QbylAgaGLByYN0hFxX28aeEQ0hUgJO+Ntn1AfmWl5HHUoYJA0Yl9HhIUUJHVaS/Sw/RLZr5aaC+A==",
+    "System.Data.SqlClient/4.8.4": {
+      "sha512": "45YflfcVXAu+Tnf0WnZzQIp9iGm+XvSvh8OosYHqax/nW3gV28NBSRvHFZ/IsuwV4JIypYCKBEOVzW+RB5+zgQ==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.3",
+      "path": "system.data.sqlclient/4.8.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -554,7 +545,7 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.3.nupkg.sha512",
+        "system.data.sqlclient.4.8.4.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -702,10 +693,10 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ACT_Enums >= 2.1.3",
-      "NLog >= 4.7.15",
+      "ACT_Enums >= 2.1.5.9",
+      "NLog >= 5.0.4",
       "Newtonsoft.Json >= 13.0.1",
-      "System.Data.SqlClient >= 4.8.3",
+      "System.Data.SqlClient >= 4.8.4",
       "System.Drawing.Common >= 6.0.0"
     ]
   },
@@ -714,7 +705,7 @@
     "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "2.1.9.1",
+    "version": "2.1.11.3",
     "restore": {
       "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",
@@ -758,11 +749,11 @@
         "dependencies": {
           "ACT_Enums": {
             "target": "Package",
-            "version": "[2.1.3, )"
+            "version": "[2.1.5.9, )"
           },
           "NLog": {
             "target": "Package",
-            "version": "[4.7.15, )"
+            "version": "[5.0.4, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -770,7 +761,7 @@
           },
           "System.Data.SqlClient": {
             "target": "Package",
-            "version": "[4.8.3, )"
+            "version": "[4.8.4, )"
           },
           "System.Drawing.Common": {
             "target": "Package",
@@ -793,7 +784,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

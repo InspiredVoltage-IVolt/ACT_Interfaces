@@ -729,6 +729,7 @@
       "sources": {
         "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "D:\\_AI\\AISkillsForWindows-master\\samples\\SentimentAnalyzerCustomSkill\\build": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

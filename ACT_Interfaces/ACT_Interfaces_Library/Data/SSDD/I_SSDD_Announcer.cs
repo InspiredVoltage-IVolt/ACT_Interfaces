@@ -92,5 +92,7 @@ namespace ACT.Core.Interfaces.Data.SSDD
         /// <returns>String Representing specific Author (Used only when specific code is required)</returns>
         public string GetProgrammingClassCode(string AuthenticationData, string Language, string ResponseID, bool IncludeArrayWrapper, bool IncludeStrictSSDDTies, string SpecificCodeAuthorID = "");
 
+        public I_SSDD_Response ScanForNewCode (string Au9thenticationData, string DateTime);
+        public I_SSDD_Response ScanForNewCodeVisHashCode(string Au9thenticationData, string HashCode);
     }
 }

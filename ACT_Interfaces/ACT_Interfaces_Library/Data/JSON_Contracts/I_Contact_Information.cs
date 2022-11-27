@@ -1,6 +1,4 @@
-﻿
-
-using ACT.Core.Interfaces.ACT;
+﻿using ACT.Core.Interfaces.Security.Identification;
 
 namespace ACT.Core.Interfaces.Data.JSON_Contracts
 {
@@ -15,13 +13,12 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
         string FirstName { get; set; }
         string LastName { get; set; }
         string MiddleName { get; set; }
-       I_User_Address PersonalAddress { get; set; }
+        I_User_Address PersonalAddress { get; set; }
         string EmailAddress { get; set; }
-        string ReachMeAddress { get; set; }              
-        string MobilePhone { get; set; }        
-        string OtherPhone { get; set; }        
+        string ReachMeAddress { get; set; }
+        string MobilePhone { get; set; }
+        string OtherPhone { get; set; }
         string BirthDate { get; set; }
-
         string CompanyName { get; set; }
         I_User_Address CompanyAddress { get; set; }
         string WorkPhone { get; set; }

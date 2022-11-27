@@ -45,7 +45,7 @@ namespace ACT.Core.Interfaces.Application
         /// <value><c>true</c> if [act configuration]; otherwise, <c>false</c>.</value>
         bool ACTConfig { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether [web configuration].
+        /// Gets or sets a value indicating whether [ACT_Configuration] or ApplicationConfiguration.
         /// </summary>
         /// <value><c>true</c> if [web configuration]; otherwise, <c>false</c>.</value>
         bool WebConfig { get; set; }

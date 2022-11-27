@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj": {
-      "version": "2.2.2.3",
+      "version": "2.2.2.5",
       "restore": {
         "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
         "projectName": "ACT_Interfaces",
@@ -49,23 +49,23 @@
           "dependencies": {
             "ACT_Enums": {
               "target": "Package",
-              "version": "[2.1.5.9, )"
+              "version": "[2.1.5.11, )"
             },
             "NLog": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.1.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[13.0.2, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.8.4, )"
+              "version": "[4.8.5, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

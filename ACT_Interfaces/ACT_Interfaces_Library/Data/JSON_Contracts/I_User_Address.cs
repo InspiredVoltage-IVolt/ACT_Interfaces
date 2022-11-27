@@ -1,4 +1,5 @@
 ﻿using ACT.Core.Interfaces.Common;
+using ACT.Core.Interfaces.Security.Identification;
 using System.Collections;
 
 namespace ACT.Core.Interfaces.Data.JSON_Contracts
@@ -8,7 +9,7 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
     /// </summary>
     public interface I_User_Address :  Plugins.I_Plugin 
     {   
-        ACT.I_Identifier Id_Processor { get; set; }
+        I_Identifier Id_Processor { get; set; }
         string Name { get; set; }
         ArrayList AllAddressLines { get; set; }
         string Address1 { get; set; }

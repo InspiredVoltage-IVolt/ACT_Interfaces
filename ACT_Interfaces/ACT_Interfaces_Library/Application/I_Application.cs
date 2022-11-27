@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACT.Core.Interfaces.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,5 +42,10 @@ namespace ACT.Core.Interfaces.Application
         /// </summary>
         List<string> RequiredFiles { get; }
 
+        /// <summary>
+        /// Initialize Application
+        /// </summary>
+        /// <param name="Params">Method Parameters</param>
+        public void Initialize(List<I_Method_Parameters> Params);
     }
 }

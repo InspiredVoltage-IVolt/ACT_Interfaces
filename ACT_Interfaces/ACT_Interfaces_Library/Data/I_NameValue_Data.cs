@@ -13,4 +13,11 @@ namespace ACT.Core.Interfaces.Data
 
         public string Value { get; set; }
     }
+
+    public interface I_Name_Value
+    {
+        public string Name { get; set; }
+
+        public string Value { get; set; }
+    }
 }

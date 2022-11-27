@@ -12,12 +12,23 @@ namespace ACT.Core.Interfaces.Data.SSDD
     public interface I_SSDD_Request
     {
         /// <summary>
-        /// Allows authorized users and non authorized users the ability to publish code
+        /// AuthenticationData
         /// </summary>
-        /// <param name="AuthenticationData">Authentiction Data</param>
-        /// <param name="ApprovalKeyHash">Approval Key Hash</param>
+        public string AuthenticationDataEmbedded { get; set; }
+
+	    /// <summary>
+	    /// Allows authorized users and non authorized users the ability to publish code
+	    /// Conforms to the LanguageCodeSubmission Object
+	    /// </summary>
+	    /// <returns>Results</returns>
+	    public string RawBody { get; set; }
+
+        /// <summary>
+        /// Allows authorized users and non authorized users the ability to publish code
+        /// Conforms to the LanguageCodeSubmission Object
+        /// </summary>
         /// <returns></returns>
-	    public string SubmitCode (string AuthenticationData, string ApprovalKeyHash);
+        public string SubmitCode { get; set; }
 
         /// <summary>
         /// Limits the page size to this number

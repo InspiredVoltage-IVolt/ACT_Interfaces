@@ -22,7 +22,7 @@ namespace ACT.Core.Interfaces.Application
     /// <summary>
     /// Installer
     /// </summary>
-    public interface I_Installer
+    public interface I_ACT_INSTALLER
     {
         /// <summary>
         /// Initialize

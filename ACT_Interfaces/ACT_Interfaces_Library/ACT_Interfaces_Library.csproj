@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <RootNamespace>ACT.Core.Interfaces</RootNamespace>
@@ -11,18 +11,18 @@
     <SignAssembly>True</SignAssembly>
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.2.5</Version>
+    <Version>2.3.1.0</Version>
     <Authors>Mark Alicz </Authors>
     <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
-    <Copyright>1998-2022 Mark Alicz</Copyright>
+    <Copyright>1998-2023 Mark Alicz</Copyright>
     <PackageProjectUrl>https://www.act-net.us/ACT/ACT_Interfaces/</PackageProjectUrl>
     <PackageIcon>ACT_Common_Icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
     <PackageTags>.NET 6; Common Interfaces; ACT; ACT Interfaces; ACT Support Assembly</PackageTags>
     <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
-    <AssemblyVersion>2.2.2.5</AssemblyVersion>
-    <FileVersion>2.2.2.5</FileVersion>
+    <AssemblyVersion>2.3.1.0</AssemblyVersion>
+    <FileVersion>2.3.1.0</FileVersion>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <AssemblyName>ACT_Interfaces</AssemblyName>
@@ -33,6 +33,7 @@
     <Title>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Title>
     <Company>IVolt, LLC</Company>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <PackageOutputPath>D:\IVolt_Releases\ACT_Interfaces\Packages\$(Platform)\$(Configuration)</PackageOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -106,9 +107,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ACT_Enums" Version="2.1.5.11" />
+    <PackageReference Include="ACT_Enums" Version="2.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="NLog" Version="5.1.0" />
+    <PackageReference Include="NLog" Version="5.1.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
@@ -116,6 +117,7 @@
   <ItemGroup>
     <Folder Include="Attributes\Developer\" />
     <Folder Include="DataAccess\Common\" />
+    <Folder Include="Documents\Excel\" />
     <Folder Include="Encoding\" />
     <Folder Include="Runtime\" />
     <Folder Include="Types\ManagerSupport\" />

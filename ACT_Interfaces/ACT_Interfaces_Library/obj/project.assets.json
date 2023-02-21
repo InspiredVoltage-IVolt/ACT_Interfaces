@@ -1,17 +1,17 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "ACT_Enums/2.1.5.11": {
+    "net7.0": {
+      "ACT_Enums/2.3.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/ACT_Enums.dll": {}
+          "lib/net7.0/ACT_Enums.dll": {}
         },
         "runtime": {
-          "lib/net6.0/ACT_Enums.dll": {}
+          "lib/net7.0/ACT_Enums.dll": {}
         },
         "contentFiles": {
-          "contentFiles/any/net6.0/Icon.ico": {
+          "contentFiles/any/net7.0/Icon.ico": {
             "buildAction": "Content",
             "codeLanguage": "any",
             "copyToOutput": false
@@ -57,12 +57,12 @@
       "Microsoft.Win32.SystemEvents/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+          "lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+          "lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
@@ -70,7 +70,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -89,7 +89,7 @@
           }
         }
       },
-      "NLog/5.1.0": {
+      "NLog/5.1.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NLog.dll": {
@@ -171,12 +171,12 @@
           "Microsoft.Win32.SystemEvents": "7.0.0"
         },
         "compile": {
-          "lib/net6.0/System.Drawing.Common.dll": {
+          "lib/net7.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Drawing.Common.dll": {
+          "lib/net7.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
@@ -184,7 +184,7 @@
           "buildTransitive/net6.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/net7.0/System.Drawing.Common.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -239,19 +239,19 @@
     }
   },
   "libraries": {
-    "ACT_Enums/2.1.5.11": {
-      "sha512": "fMFXlsRfmsIw+Gra2eOpl1pPyLYAv/NwQWOq15jjfF+Cn2M/k8q6qkLq5L3DBZwvbHRsRheS3LLb6NmrMJowzw==",
+    "ACT_Enums/2.3.1": {
+      "sha512": "c8lOKr5A73Zhoi9LkeMUZzSh8TwBC59933E9jtXd/uaJMDHDhdq+piSqv5BWv+KZ8Uyn8ujR00k1oT6wsU2x7g==",
       "type": "package",
-      "path": "act_enums/2.1.5.11",
+      "path": "act_enums/2.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ACT_Common_Icon.png",
-        "act_enums.2.1.5.11.nupkg.sha512",
+        "act_enums.2.3.1.nupkg.sha512",
         "act_enums.nuspec",
         "content/Icon.ico",
-        "contentFiles/any/net6.0/Icon.ico",
-        "lib/net6.0/ACT_Enums.dll"
+        "contentFiles/any/net7.0/Icon.ico",
+        "lib/net7.0/ACT_Enums.dll"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -379,10 +379,10 @@
         "packageIcon.png"
       ]
     },
-    "NLog/5.1.0": {
-      "sha512": "oW7ekrkRG9okpDMUcEglunWj8Qf2RY8qkgl+/chJoavzg3dbT13y32t19R54FKkmq80fKzw4ZekZkCrRGanKgQ==",
+    "NLog/5.1.2": {
+      "sha512": "JfQY93ure3IPVTN3eabBewBGvrcXcWIlaesFEXdy5UzIymfIT9yCgLISYtM0cOhjWziIaUr/6Z9NC2RwtjwrsQ==",
       "type": "package",
-      "path": "nlog/5.1.0",
+      "path": "nlog/5.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -399,7 +399,7 @@
         "lib/netstandard1.5/NLog.xml",
         "lib/netstandard2.0/NLog.dll",
         "lib/netstandard2.0/NLog.xml",
-        "nlog.5.1.0.nupkg.sha512",
+        "nlog.5.1.2.nupkg.sha512",
         "nlog.nuspec"
       ]
     },
@@ -691,9 +691,9 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "ACT_Enums >= 2.1.5.11",
-      "NLog >= 5.1.0",
+    "net7.0": [
+      "ACT_Enums >= 2.3.1",
+      "NLog >= 5.1.2",
       "Newtonsoft.Json >= 13.0.2",
       "System.Data.SqlClient >= 4.8.5",
       "System.Drawing.Common >= 7.0.0"
@@ -701,10 +701,10 @@
   },
   "packageFolders": {
     "C:\\Users\\MarkAlicz\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MarkAlicz\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {}
   },
   "project": {
-    "version": "2.2.2.5",
+    "version": "2.3.1",
     "restore": {
       "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",
@@ -713,26 +713,26 @@
       "outputPath": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Users\\MarkAlicz\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\MarkAlicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MarkAlicz\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "D:\\_AI\\AISkillsForWindows-master\\samples\\SentimentAnalyzerCustomSkill\\build": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {}
         }
       },
@@ -743,16 +743,16 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "ACT_Enums": {
             "target": "Package",
-            "version": "[2.1.5.11, )"
+            "version": "[2.3.1, )"
           },
           "NLog": {
             "target": "Package",
-            "version": "[5.1.0, )"
+            "version": "[5.1.2, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -783,7 +783,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

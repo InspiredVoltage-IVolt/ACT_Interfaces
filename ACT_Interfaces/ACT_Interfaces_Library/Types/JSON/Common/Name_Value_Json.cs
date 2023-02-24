@@ -9,7 +9,13 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Types.JSON
 {
- 
+
+
+   //Alias
+   public class Basic_Name_Value : KeyValue_Information_Simple_Json
+   {
+
+   }
 
     /// <summary>
     /// Simple Key Value Class

@@ -9,7 +9,7 @@ namespace ACT.Core.Interfaces.Common
 {
     public interface I_Method_Parameters
     {
-        I_Name_Value NameValueParameters { get; set; }
+        I_NameValue NameValueParameters { get; set; }
         
         bool IsRequired { get; set; }
     }

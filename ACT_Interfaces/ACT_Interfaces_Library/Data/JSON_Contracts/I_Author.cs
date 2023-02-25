@@ -19,6 +19,6 @@ namespace ACT.Core.Interfaces.Data.JSON_Contracts
         string DateLastEdited { get; set; }
         string Description { get; set; }
         string Validation_Hash { get; set; }
-        List<I_NameValue_Data> AdditionalInformation { get; set; }
+        List<I_NameValue> AdditionalInformation { get; set; }
     }
 }

@@ -11,6 +11,6 @@
         bool? Append_System_ConfigurationValues { get; set; }        
         string SystemConfiguration_AppendingValues_Filename { get; set; }
 
-        List<Interfaces.Data.I_NameValue_Data> AdditionalData { get; set; }
+        List<Interfaces.Data.I_NameValue> AdditionalData { get; set; }
     }
 }

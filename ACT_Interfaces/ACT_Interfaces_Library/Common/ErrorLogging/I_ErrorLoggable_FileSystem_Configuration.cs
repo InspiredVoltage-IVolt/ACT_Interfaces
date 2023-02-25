@@ -33,7 +33,7 @@ namespace ACT.Core.Interfaces.Common.ErrorLogging
         public string EncryptionMethod { get; set; }
 
 
-        public List<Data.I_NameValue_Data> CustomData { get; set; }
+        public List<Data.I_NameValue> CustomData { get; set; }
 
 
         public string Plugin_Package { get; set; }

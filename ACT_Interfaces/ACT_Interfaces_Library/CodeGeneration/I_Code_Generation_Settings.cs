@@ -234,7 +234,7 @@
         string ApiKeyIfNew { get; set; }
         string PackageName { get; set; }
         string Version { get; set; }
-        Data.I_NameValue_Data PackageInformation { get; set; }
+        Data.I_NameValue PackageInformation { get; set; }
 
         #endregion
     }

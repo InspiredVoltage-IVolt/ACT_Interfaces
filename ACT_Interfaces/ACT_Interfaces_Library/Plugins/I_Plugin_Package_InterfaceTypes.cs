@@ -29,6 +29,6 @@ namespace ACT.Core.Interfaces.Plugins
 
         Type GetTypeInformation();
 
-        List<Data.I_NameValue_Data> AdditionalData { get; set; }
+        List<Data.I_NameValue> AdditionalData { get; set; }
     }
 }

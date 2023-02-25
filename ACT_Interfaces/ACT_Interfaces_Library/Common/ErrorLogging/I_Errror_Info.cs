@@ -22,6 +22,6 @@ namespace ACT.Core.Interfaces.Common.ErrorLogging
         Exception ExceptionInfo { get; set; }
 
         /// <summary>Additional Information</summary>
-        List<I_NameValue_Data> AdditionalInformation { get; set; }
+        List<I_NameValue> AdditionalInformation { get; set; }
     }
 }

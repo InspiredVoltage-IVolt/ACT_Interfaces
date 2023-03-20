@@ -21,7 +21,7 @@ namespace ACT.Core.Interfaces.AI
     /// </summary>
     /// <seealso cref="ACT.Core.Interfaces.IO.I_Exportable{System.Byte[]}" />
     /// <seealso cref="ACT.Core.Interfaces.IO.I_Saveable" />
-    public interface I_Dataset : IO.I_Exportable<byte[]>, IO.I_Saveable
+    public interface I_Dataset : IO.I_Exportable, IO.I_Saveable
     {
         /// <summary>
         /// Internal ID for long term data storage and retrieval

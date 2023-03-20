@@ -11,7 +11,7 @@
     <SignAssembly>True</SignAssembly>
     <ErrorReport>none</ErrorReport>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.3.2.0</Version>
+    <Version>2.3.3.1</Version>
     <Authors>Mark Alicz </Authors>
     <Description>Common Interfaces used across the ACT Application or can be used outside the ACT Ecosystem</Description>
     <Copyright>1998-2023 Mark Alicz</Copyright>
@@ -21,8 +21,8 @@
     <RepositoryUrl>https://github.com/InspiredVoltage-IVolt/ACT_Interfaces</RepositoryUrl>
     <PackageTags>.NET 6; Common Interfaces; ACT; ACT Interfaces; ACT Support Assembly</PackageTags>
     <PackageReleaseNotes>Refactoring, Adding and Rearranging</PackageReleaseNotes>
-    <AssemblyVersion>2.3.2.0</AssemblyVersion>
-    <FileVersion>2.3.2.0</FileVersion>
+    <AssemblyVersion>2.3.3.1</AssemblyVersion>
+    <FileVersion>2.3.3.1</FileVersion>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <AssemblyName>ACT_Interfaces</AssemblyName>
@@ -107,7 +107,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ACT_Enums" Version="2.3.1" />
+    <PackageReference Include="ACT_Enums" Version="2.3.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="NLog" Version="5.1.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
@@ -121,6 +121,7 @@
     <Folder Include="Encoding\" />
     <Folder Include="Runtime\" />
     <Folder Include="Types\ManagerSupport\" />
+    <Folder Include="Virtual_Classes\Data\" />
   </ItemGroup>
 
   <ItemGroup>

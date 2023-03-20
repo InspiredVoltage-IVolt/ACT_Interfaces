@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "ACT_Enums/2.3.1": {
+      "ACT_Enums/2.3.2.2": {
         "type": "package",
         "compile": {
           "lib/net7.0/ACT_Enums.dll": {}
@@ -239,15 +239,14 @@
     }
   },
   "libraries": {
-    "ACT_Enums/2.3.1": {
-      "sha512": "c8lOKr5A73Zhoi9LkeMUZzSh8TwBC59933E9jtXd/uaJMDHDhdq+piSqv5BWv+KZ8Uyn8ujR00k1oT6wsU2x7g==",
+    "ACT_Enums/2.3.2.2": {
+      "sha512": "Xx28MRSRriUftlaoJhkA0ORXjkd4ShWUVUlbb0oOd44NRCwlV+Zg0pBpG8lBUpcvL4xdmXx4WeeBq2byj+xjAw==",
       "type": "package",
-      "path": "act_enums/2.3.1",
+      "path": "act_enums/2.3.2.2",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ACT_Common_Icon.png",
-        "act_enums.2.3.1.nupkg.sha512",
+        "act_enums.2.3.2.2.nupkg.sha512",
         "act_enums.nuspec",
         "content/Icon.ico",
         "contentFiles/any/net7.0/Icon.ico",
@@ -692,7 +691,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "ACT_Enums >= 2.3.1",
+      "ACT_Enums >= 2.3.2.2",
       "NLog >= 5.1.2",
       "Newtonsoft.Json >= 13.0.2",
       "System.Data.SqlClient >= 4.8.5",
@@ -704,7 +703,7 @@
     "C:\\Users\\MarkAlicz\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {}
   },
   "project": {
-    "version": "2.3.2",
+    "version": "2.3.3.1",
     "restore": {
       "projectUniqueName": "D:\\IVolt_Development\\__GITHUB\\ACT_Interfaces\\ACT_Interfaces\\ACT_Interfaces_Library\\ACT_Interfaces_Library.csproj",
       "projectName": "ACT_Interfaces",
@@ -720,6 +719,7 @@
         "C:\\Users\\MarkAlicz\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -748,7 +748,7 @@
         "dependencies": {
           "ACT_Enums": {
             "target": "Package",
-            "version": "[2.3.1, )"
+            "version": "[2.3.2.2, )"
           },
           "NLog": {
             "target": "Package",
@@ -783,7 +783,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   },

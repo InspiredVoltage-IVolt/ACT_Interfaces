@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Data
 {
-    public interface I_NameValue : Plugins.I_Plugin
+    public interface I_NameValue 
     {
         public string Name { get; set; }
 
         public string Value { get; set; }
     }
 
-    public interface I_NameValue_Data : Plugins.I_Plugin
+    public interface I_NameValue_Data 
    {
         public string Name { get; set; }
 

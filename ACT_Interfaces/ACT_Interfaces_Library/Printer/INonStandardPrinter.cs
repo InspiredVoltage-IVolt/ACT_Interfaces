@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ACT.Core.Interfaces.Printer
 {
-    public interface I_INonStandardPrinter
+    public interface I_NonStandardPrinter
     {
 
     }

@@ -23,7 +23,7 @@ namespace ACT.Core.Types.Communication
         {
             get
             {
-                try { return _emailPhoneContactInfo.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_Base64Json))); }
+                try { return (I_Author)_emailPhoneContactInfo.ImportDataFromJson(System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(IEmailPhoneContactInfo_Base64Json))); }
                 catch { return null; }
             }
             set

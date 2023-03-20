@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Data.JSON_Contracts
 {
-    public interface I_Author : Plugins.I_Plugin, IO.I_Exportable<I_Author>
+    public interface I_Author : Plugins.I_Plugin, IO.I_Exportable
     {        
         string Actid { get; set; }
         string ExternalId { get; set; }

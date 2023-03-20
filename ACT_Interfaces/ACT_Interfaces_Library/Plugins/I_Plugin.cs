@@ -23,7 +23,7 @@ namespace ACT.Core.Interfaces.Plugins
         /// <summary>
         /// Indicate if this is a ACT built in Plugin or Not
         /// </summary>
-        bool Is_ACTInternal { get; }
+        bool Is_ACT_Internal { get; }
 
         /// <summary>
         /// DLLFileName
@@ -55,6 +55,8 @@ namespace ACT.Core.Interfaces.Plugins
         /// </summary>
         /// <param name="UserInfo"></param>
         void SetImpersonate(I_UserInfo UserInfo);
+
+        //List<
 
         /// <summary>
         /// Returns all the System Settings Required By The Plugin

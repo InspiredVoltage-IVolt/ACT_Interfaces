@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ACT.Core.Interfaces.Data
 {
-    public interface I_NameValue_Advanced_Data : Plugins.I_Plugin
+    public interface I_NameValue_Advanced_Data
     {
         string Name { get; set; }
         string Value { get; set; }
